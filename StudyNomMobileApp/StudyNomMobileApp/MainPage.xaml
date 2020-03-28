@@ -6,8 +6,60 @@
              mc:Ignorable="d"
              x:Class="StudyNomMobileApp.MainPage">
 
-    <StackLayout>
-        <Label Text="Hello Wolrd" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-    </StackLayout>
+    <FlexLayout Direction="Column"
+                JustifyContent="SpaceBetween">
+        
+        <!--Шапка-->
+        <Frame     HeightRequest="50"
+                   BackgroundColor="Gray">
+            <FlexLayout Direction="Row"
+                            AlignItems="Center"
+                            JustifyContent="SpaceBetween">
+                <Button
+                        Text="Menu"
+                        BackgroundColor="#F00"
+                        WidthRequest="50"
+                        />
+
+                <Entry Placeholder="Поиск" 
+                            FontSize="12"
+                            BackgroundColor="#0F0"
+                            WidthRequest="230"/>
+
+                <ImageButton BackgroundColor="Aqua"
+                                 WidthRequest="50"
+                                 HeightRequest="40"
+                                 CornerRadius="50"/>
+            </FlexLayout>
+        </Frame>
+
+        <!--Реклама-->
+        <Frame BackgroundColor="Red"
+               FlexLayout.Grow="1">
+            <Label Text="Тут будет Рекламка"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="30"></Label>
+        </Frame>
+        
+        <!--Контент-->
+        <Frame FlexLayout.Grow="4">
+            <Label Text="Тут будет контент"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="30"></Label>
+        </Frame>
+
+        <!--Панель навигации-->
+        <Frame 
+                   BackgroundColor="Yellow">
+            <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="CenterAndExpand">
+                <Button Text="Домой" WidthRequest="70"></Button>
+                <Button Text="Тренировка" WidthRequest="70"></Button>
+                <Button Text="Новости" WidthRequest="70"></Button>
+                <Button Text="Прогресс" WidthRequest="70"></Button>
+            </StackLayout>
+        </Frame>
+    </FlexLayout>
+
 
 </ContentPage>
