@@ -5,60 +5,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="StudyNomMobileApp.MainPage">
-
+    <ContentPage.Resources>
+        <ResourceDictionary Source="./Styles/MainPageStyle.xaml"></ResourceDictionary>
+    </ContentPage.Resources>
     <FlexLayout Direction="Column"
                 JustifyContent="SpaceBetween">
-        
-        <!--Шапка-->
-        <Frame     HeightRequest="50"
-                   BackgroundColor="Gray">
-            <FlexLayout Direction="Row"
-                            AlignItems="Center"
-                            JustifyContent="SpaceBetween">
-                <Button
-                        Text="Menu"
-                        BackgroundColor="#F00"
-                        WidthRequest="50"
-                        />
+        <StackLayout Spacing="0">
+            <!--#region Верхний Bar-->
+            <Frame  Style="{StaticResource FrameTopBar}">
+                <FlexLayout     Style="{StaticResource FlexTopBar}">
+                    <Button Style="{StaticResource MenuTopBar}"
+                            Text="Menu"/>
+                    <Entry  Style="{StaticResource SearchTopBar}"
+                            Placeholder="Поиск"/>
+                    <ImageButton Style="{StaticResource ProfileTopBar}"/>
+                </FlexLayout>
+            </Frame>
+            <!--#endregion-->
 
-                <Entry Placeholder="Поиск" 
-                            FontSize="12"
-                            BackgroundColor="#0F0"
-                            WidthRequest="230"/>
+            
+            
+            
+            <!--#region Баннер-->
+            <Frame Style="{StaticResource Key=Banner}">
+                <Label Text="Тут будет Рекламка"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"></Label>
+            </Frame>
+            <!--#endregion-->
+        </StackLayout>
 
-                <ImageButton BackgroundColor="Aqua"
-                                 WidthRequest="50"
-                                 HeightRequest="40"
-                                 CornerRadius="50"/>
-            </FlexLayout>
-        </Frame>
-
-        <!--Реклама-->
-        <Frame BackgroundColor="Red"
-               FlexLayout.Grow="1">
-            <Label Text="Тут будет Рекламка"
-                   HorizontalOptions="CenterAndExpand"
-                   FontSize="30"></Label>
-        </Frame>
         
         <!--Контент-->
-        <Frame FlexLayout.Grow="4">
+        <Frame>
             <Label Text="Тут будет контент"
                    HorizontalOptions="CenterAndExpand"
                    FontSize="30"></Label>
         </Frame>
 
         <!--Панель навигации-->
-        <Frame 
-                   BackgroundColor="Yellow">
-            <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="CenterAndExpand">
-                <Button Text="Домой" WidthRequest="70"></Button>
-                <Button Text="Тренировка" WidthRequest="70"></Button>
-                <Button Text="Новости" WidthRequest="70"></Button>
-                <Button Text="Прогресс" WidthRequest="70"></Button>
-            </StackLayout>
-        </Frame>
+        <FlexLayout Style="{StaticResource NavFlex}">
+            <Button Style="{StaticResource NavBtns}" 
+                    Text="Домой" ></Button>
+            <Button Style="{StaticResource NavBtns}" 
+                    Text="Тренировка"></Button>
+            <Button Style="{StaticResource NavBtns}" 
+                    Text="Новости"></Button>
+            <Button Style="{StaticResource NavBtns}" 
+                    Text="Прогресс"></Button>
+        </FlexLayout>
     </FlexLayout>
 
 

@@ -6,6 +6,53 @@
              mc:Ignorable="d"
              x:Class="StudyNomMobileApp.App">
     <Application.Resources>
+        <!--#region Верхний Bar-->
+        <Style x:Key="FrameTopBar" TargetType="Frame">
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="BackgroundColor" Value="Gray" />
+        </Style>
 
+        <Style x:Key="FlexTopBar" TargetType="FlexLayout">
+            <Setter Property="Direction" Value="Row"></Setter>
+            <Setter Property="JustifyContent" Value="SpaceBetween" />
+        </Style>
+
+        <Style x:Key="MenuTopBar" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#F00" />
+            <Setter Property="FlexLayout.Basis" Value="15%"></Setter>
+        </Style>
+
+        <Style x:Key="SearchTopBar" TargetType="Entry">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="BackgroundColor" Value="#0F0" />
+            <Setter Property="FlexLayout.Basis" Value="60%"></Setter>
+        </Style>
+
+        <Style x:Key="ProfileTopBar" TargetType="ImageButton">
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="WidthRequest" Value="60" />
+            <Setter Property="CornerRadius" Value="50" />
+            <Setter Property="BackgroundColor" Value="Aqua" />
+            <Setter Property="FlexLayout.Basis" Value="15%"></Setter>
+        </Style>
+        <!--#endregion-->
+        
+        <!--#region Панель навигации-->
+        <Style x:Key="NavFrame" TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="Yellow" />
+            <Setter Property="HeightRequest" Value="30" />
+        </Style>
+
+        <Style x:Key="NavFlex" TargetType="FlexLayout">
+            <Setter Property="Direction" Value="Row"></Setter>
+            <Setter Property="JustifyContent" Value="SpaceBetween" />
+            <Setter Property="HeightRequest" Value="60" />
+            <Setter Property="BackgroundColor" Value="Red" />
+        </Style>
+
+        <Style x:Key="NavBtns" TargetType="Button">
+            <Setter Property="FlexLayout.Basis" Value="25%" />
+        </Style>
+        <!--#endregion-->
     </Application.Resources>
 </Application>
