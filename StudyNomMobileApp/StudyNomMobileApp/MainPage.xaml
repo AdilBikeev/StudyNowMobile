@@ -6,32 +6,31 @@
              mc:Ignorable="d"
              x:Class="StudyNomMobileApp.MainPage">
     <ContentPage.Resources>
-        <ResourceDictionary Source="./Styles/MainPageStyle.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <!--#region Баннер-->
+
+            <!--#endregion-->
+        </ResourceDictionary>
     </ContentPage.Resources>
     <FlexLayout Direction="Column"
-                JustifyContent="SpaceBetween">
+                JustifyContent="SpaceBetween" ScaleY="1" Scale="1" Position="Relative">
         <StackLayout Spacing="0">
             <!--#region Верхний Bar-->
             <Frame  Style="{StaticResource FrameTopBar}">
                 <FlexLayout     Style="{StaticResource FlexTopBar}">
-                    <Button Style="{StaticResource MenuTopBar}"
-                            Text="Menu"/>
+                    <ImageButton Style="{StaticResource MenuTopBar}"
+                            Source="Images/TopBar/TopBar_Menu.png"/>
                     <Entry  Style="{StaticResource SearchTopBar}"
                             Placeholder="Поиск"/>
-                    <ImageButton Style="{StaticResource ProfileTopBar}"/>
+                    <ImageButton Style="{StaticResource ProfileTopBar}"
+                            Source="Images/TopBar/TopBar_Profile.png" VerticalOptions="FillAndExpand"/>
                 </FlexLayout>
             </Frame>
             <!--#endregion-->
 
-            
-            
-            
             <!--#region Баннер-->
-            <Frame Style="{StaticResource Key=Banner}">
-                <Label Text="Тут будет Рекламка"
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="30"></Label>
-            </Frame>
+            <Image HorizontalOptions="CenterAndExpand"
+                       Source="Images/Banner/Banner_Banner.png"></Image>
             <!--#endregion-->
         </StackLayout>
 
@@ -44,15 +43,15 @@
         </Frame>
 
         <!--Панель навигации-->
-        <FlexLayout Style="{StaticResource NavFlex}">
-            <Button Style="{StaticResource NavBtns}" 
-                    Text="Домой" ></Button>
-            <Button Style="{StaticResource NavBtns}" 
-                    Text="Тренировка"></Button>
-            <Button Style="{StaticResource NavBtns}" 
-                    Text="Новости"></Button>
-            <Button Style="{StaticResource NavBtns}" 
-                    Text="Прогресс"></Button>
+        <FlexLayout  Style="{StaticResource NavFlex}">
+            <Image Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Home.png"></Image>
+            <Image Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Workout.png"></Image>
+            <Image Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_News.png"></Image>
+            <Image Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Stats.png"></Image>
         </FlexLayout>
     </FlexLayout>
 

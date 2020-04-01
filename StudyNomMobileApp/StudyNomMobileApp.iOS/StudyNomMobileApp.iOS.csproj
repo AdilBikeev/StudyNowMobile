@@ -133,4 +133,46 @@
       <Name>StudyNomMobileApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\NavigationBar\Nav_Workout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\NavigationBar\Nav_Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\NavigationBar\Nav_News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\NavigationBar\Nav_Stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\TopBar\TopBar_Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\TopBar\TopBar_Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Banner\Banner_Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Banner_Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nav_Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nav_News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nav_Stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Nav_Workout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopBar_Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopBar_Profile.png" />
+  </ItemGroup>
 </Project>
