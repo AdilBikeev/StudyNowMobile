@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="StudyNomMobileApp.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <!--#region Баннер-->
-
+            <Style x:Key="Banner" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="Source" Value="Images/Banner/Banner_Banner.png" />
+            </Style>
             <!--#endregion-->
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -18,19 +22,16 @@
             <!--#region Верхний Bar-->
             <Frame  Style="{StaticResource FrameTopBar}">
                 <FlexLayout     Style="{StaticResource FlexTopBar}">
-                    <ImageButton Style="{StaticResource MenuTopBar}"
-                            Source="Images/TopBar/TopBar_Menu.png"/>
+                    <ImageButton Style="{StaticResource MenuTopBar}"/>
                     <Entry  Style="{StaticResource SearchTopBar}"
                             Placeholder="Поиск"/>
-                    <ImageButton Style="{StaticResource ProfileTopBar}"
-                            Source="Images/TopBar/TopBar_Profile.png" VerticalOptions="FillAndExpand"/>
+                    <image:CircleImage Style="{StaticResource ProfileTopBar}"/>
                 </FlexLayout>
             </Frame>
             <!--#endregion-->
 
             <!--#region Баннер-->
-            <Image HorizontalOptions="CenterAndExpand"
-                       Source="Images/Banner/Banner_Banner.png"></Image>
+            <Image Style="{StaticResource Banner}"></Image>
             <!--#endregion-->
         </StackLayout>
 
@@ -44,14 +45,14 @@
 
         <!--Панель навигации-->
         <FlexLayout  Style="{StaticResource NavFlex}">
-            <Image Style="{StaticResource NavBtns}" 
-                    Source="Images/NavigationBar/Nav_Home.png"></Image>
-            <Image Style="{StaticResource NavBtns}" 
-                    Source="Images/NavigationBar/Nav_Workout.png"></Image>
-            <Image Style="{StaticResource NavBtns}" 
-                    Source="Images/NavigationBar/Nav_News.png"></Image>
-            <Image Style="{StaticResource NavBtns}" 
-                    Source="Images/NavigationBar/Nav_Stats.png"></Image>
+            <ImageButton Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Home.png"></ImageButton>
+            <ImageButton Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Workout.png"></ImageButton>
+            <ImageButton Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_News.png"></ImageButton>
+            <ImageButton Style="{StaticResource NavBtns}" 
+                    Source="Images/NavigationBar/Nav_Stats.png"></ImageButton>
         </FlexLayout>
     </FlexLayout>
 
