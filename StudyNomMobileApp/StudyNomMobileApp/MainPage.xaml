@@ -10,8 +10,8 @@
         <ResourceDictionary>
             <!--#region Баннер-->
             <Style x:Key="Banner" TargetType="Image">
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                 <Setter Property="Source" Value="Images/Banner/Banner_Banner.png" />
+                <Setter Property="Aspect" Value="AspectFill" />
             </Style>
             <!--#endregion-->
         </ResourceDictionary>
@@ -21,7 +21,7 @@
         <StackLayout Spacing="0">
             <!--#region Верхний Bar-->
             <FlexLayout     Style="{StaticResource FlexTopBar}">
-                <ImageButton Style="{StaticResource MenuTopBar}" Margin="5,0,0,0"/>
+                <ImageButton Style="{StaticResource MenuTopBar}"/>
                 <Entry  Style="{StaticResource SearchTopBar}"
                             Placeholder="Поиск"/>
                 <image:CircleImage Style="{StaticResource ProfileTopBar}"/>
