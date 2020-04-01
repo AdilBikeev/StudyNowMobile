@@ -9,32 +9,32 @@
     <Application.Resources>
         <!--#region Верхний Bar-->
         <Style x:Key="FrameTopBar" TargetType="Frame">
-            <Setter Property="HeightRequest" Value="60" />
             <Setter Property="BackgroundColor" Value="#EF6767" />
         </Style>
 
         <Style x:Key="FlexTopBar" TargetType="FlexLayout">
             <Setter Property="Direction" Value="Row"></Setter>
             <Setter Property="JustifyContent" Value="SpaceBetween" />
+            <Setter Property="BackgroundColor" Value="#EF6767" />
+            <Setter Property="HeightRequest" Value="50" />
         </Style>
 
         <Style x:Key="MenuTopBar" TargetType="ImageButton">
-            <Setter Property="FlexLayout.Basis" Value="15%"></Setter>
             <Setter Property="BackgroundColor" Value="#EF6767" />
+            <Setter Property="FlexLayout.Basis" Value="13%" />
+            <Setter Property="Padding" Value="0 0 0 5" />
             <Setter Property="Source" Value="Images/TopBar/TopBar_Menu.png" />
         </Style>
 
         <Style x:Key="SearchTopBar" TargetType="Entry">
-            <Setter Property="FontSize" Value="12" />
-            <Setter Property="BackgroundColor" Value="#0F0" />
+            <Setter Property="FontSize" Value="10" />
             <Setter Property="FlexLayout.Basis" Value="60%"></Setter>
         </Style>
 
         <Style x:Key="ProfileTopBar" TargetType="image:CircleImage">
             <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
-            <Setter Property="HeightRequest" Value="60" />
-            <Setter Property="WidthRequest" Value="60" />
             <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="Margin" Value="5 15 5 0" />
         </Style>
         <!--#endregion-->
         

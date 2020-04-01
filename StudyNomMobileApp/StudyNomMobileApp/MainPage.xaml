@@ -17,17 +17,15 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <FlexLayout Direction="Column"
-                JustifyContent="SpaceBetween" ScaleY="1" Scale="1" Position="Relative">
+                JustifyContent="SpaceBetween">
         <StackLayout Spacing="0">
             <!--#region Верхний Bar-->
-            <Frame  Style="{StaticResource FrameTopBar}">
-                <FlexLayout     Style="{StaticResource FlexTopBar}">
-                    <ImageButton Style="{StaticResource MenuTopBar}"/>
-                    <Entry  Style="{StaticResource SearchTopBar}"
+            <FlexLayout     Style="{StaticResource FlexTopBar}">
+                <ImageButton Style="{StaticResource MenuTopBar}" Margin="5,0,0,0"/>
+                <Entry  Style="{StaticResource SearchTopBar}"
                             Placeholder="Поиск"/>
-                    <image:CircleImage Style="{StaticResource ProfileTopBar}"/>
-                </FlexLayout>
-            </Frame>
+                <image:CircleImage Style="{StaticResource ProfileTopBar}"/>
+            </FlexLayout>
             <!--#endregion-->
 
             <!--#region Баннер-->
