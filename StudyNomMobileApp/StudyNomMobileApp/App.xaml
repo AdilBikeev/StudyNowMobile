@@ -22,7 +22,7 @@
         <Style x:Key="MenuTopBar" TargetType="ImageButton">
             <Setter Property="BackgroundColor" Value="#EF6767" />
             <Setter Property="FlexLayout.Basis" Value="13%" />
-            <Setter Property="Padding" Value="0 0 0 5" />
+            <Setter Property="Padding" Value="10,0,0,0" />
             <Setter Property="Source" Value="Images/TopBar/TopBar_Menu.png" />
         </Style>
 
@@ -34,7 +34,7 @@
         <Style x:Key="ProfileTopBar" TargetType="image:CircleImage">
             <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
             <Setter Property="Aspect" Value="AspectFill" />
-            <Setter Property="Margin" Value="5 15 5 0" />
+            <Setter Property="Margin" Value="5,5,10,5" />
         </Style>
         <!--#endregion-->
         
