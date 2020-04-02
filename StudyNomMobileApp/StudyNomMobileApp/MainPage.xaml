@@ -44,26 +44,26 @@
         <!--Панель навигации-->
         <FlexLayout  Style="{StaticResource NavFlex}">
             <StackLayout Style="{StaticResource NavStack}">
-                <ImageButton Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_Home.png"></ImageButton>
+                <Image Style="{StaticResource NavBtns}" 
+                             Source="Images/NavigationBar/Nav_Home.png"></Image>
                 <Label Style="{StaticResource NavLabels}">Домой</Label>
             </StackLayout>
 
             <StackLayout Style="{StaticResource NavStack}">
-                <ImageButton Style="{StaticResource NavBtns}" 
-                            Source="Images/NavigationBar/Nav_Workout.png"></ImageButton>
+                <Image Style="{StaticResource NavBtns}" 
+                            Source="Images/NavigationBar/Nav_Workout.png"></Image>
                 <Label Style="{StaticResource NavLabels}">Тренироваться</Label>
             </StackLayout>
 
             <StackLayout Style="{StaticResource NavStack}">
-                <ImageButton Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_News.png"></ImageButton>
+                <Image Style="{StaticResource NavBtns}" 
+                             Source="Images/NavigationBar/Nav_News.png"></Image>
                 <Label Style="{StaticResource NavLabels}">Новости</Label>
             </StackLayout>
 
             <StackLayout Style="{StaticResource NavStack}">
-                <ImageButton Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_Stats.png"></ImageButton>
+                <Image Style="{StaticResource NavBtns}" 
+                             Source="Images/NavigationBar/Nav_Stats.png"></Image>
                 <Label Style="{StaticResource NavLabels}">Статистика</Label>
             </StackLayout>
 
