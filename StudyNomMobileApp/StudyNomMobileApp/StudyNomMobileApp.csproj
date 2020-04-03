@@ -42,4 +42,10 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource\Home\HomeDictianary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

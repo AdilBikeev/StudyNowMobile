@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <!--#region Баннер-->
+    <Style x:Key="Banner" TargetType="Image">
+        <Setter Property="Source" Value="Images/Banner/Banner_Banner.png" />
+        <Setter Property="Aspect" Value="AspectFill" />
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Курсы -->
+    <Style x:Key="CursFrame" TargetType="Frame">
+        <Setter Property="FlexLayout.Basis" Value="76%" />
+        <Setter Property="BackgroundColor" Value="#F5EBEB" />
+    </Style>
+    <Style x:Key="CursFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+    </Style>
+    <Style x:Key="CursStack" TargetType="StackLayout">
+        <Setter Property="HeightRequest" Value="150" />
+        <Setter Property="BackgroundColor" Value="#FFF" />
+        <Setter Property="Margin" Value="5,5,5,5" />
+    </Style>
+    <Style x:Key="CursNameLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="#050505" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    <Style x:Key="CursDeployLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="#313131" />
+    </Style>
+    <Style x:Key="CursDescLabel" TargetType="Label">
+        <Setter Property="TextColor" Value="#696969" />
+    </Style>
+    <Style x:Key="CursItemStack" TargetType="StackLayout">
+        <Setter Property="FlexLayout.Basis" Value="25%" />
+    </Style>
+    <Style x:Key="CursItemName" TargetType="Label">
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+    </Style>
+    <!--#endregion-->
+</ResourceDictionary>   
