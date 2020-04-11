@@ -8,7 +8,7 @@
              x:Class="StudyNomMobileApp.MainPage"
              BackgroundColor="#F5EBEB">
     <ContentPage.Resources>
-        <ResourceDictionary Source="Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout Style="{StaticResource MainStack}">
             <!--#region Верхний Bar-->
