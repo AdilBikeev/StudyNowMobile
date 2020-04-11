@@ -36,6 +36,7 @@
         <!--#region Контент-->
         <Style x:Key="ContentScroll" TargetType="ScrollView">
             <Setter Property="BackgroundColor" Value="#F5EBEB" />
+            <Setter Property="HeightRequest" Value="600" />
         </Style>
         <!--#endregion-->
         
