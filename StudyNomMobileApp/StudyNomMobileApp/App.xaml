@@ -8,10 +8,6 @@
              x:Class="StudyNomMobileApp.App">
     <Application.Resources>
         <!--#region Верхний Bar-->
-        <Style x:Key="FrameTopBar" TargetType="Frame">
-            <Setter Property="BackgroundColor" Value="#EF6767" />
-        </Style>
-
         <Style x:Key="FlexTopBar" TargetType="FlexLayout">
             <Setter Property="Direction" Value="Row"></Setter>
             <Setter Property="JustifyContent" Value="SpaceBetween" />
@@ -21,7 +17,6 @@
 
         <Style x:Key="MenuTopBar" TargetType="ImageButton">
             <Setter Property="BackgroundColor" Value="#EF6767" />
-            <Setter Property="FlexLayout.Basis" Value="13%" />
             <Setter Property="Padding" Value="10,0,0,0" />
             <Setter Property="Source" Value="Images/TopBar/TopBar_Menu.png" />
         </Style>
@@ -35,6 +30,12 @@
             <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
             <Setter Property="Aspect" Value="AspectFill" />
             <Setter Property="Margin" Value="5,5,10,5" />
+        </Style>
+        <!--#endregion-->
+        
+        <!--#region Контент-->
+        <Style x:Key="ContentScroll" TargetType="ScrollView">
+            <Setter Property="BackgroundColor" Value="#F5EBEB" />
         </Style>
         <!--#endregion-->
         

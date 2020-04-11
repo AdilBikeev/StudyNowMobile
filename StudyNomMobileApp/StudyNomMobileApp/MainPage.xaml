@@ -9,17 +9,8 @@
              BackgroundColor="#F5EBEB">
     <ContentPage.Resources>
         <ResourceDictionary Source="Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
-        <ResourceDictionary>
-            <Style x:Key="CursItemImage" TargetType="image:CircleImage">
-                <Setter Property="HeightRequest" Value="60" />
-                <Setter Property="Aspect" Value="AspectFill" />
-                <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
-            </Style>
-        </ResourceDictionary>
     </ContentPage.Resources>
-    <FlexLayout Direction="Column"
-                JustifyContent="SpaceBetween">
-        <StackLayout Spacing="0">
+    <StackLayout Style="{StaticResource MainStack}">
             <!--#region Верхний Bar-->
             <FlexLayout     Style="{StaticResource FlexTopBar}">
                 <ImageButton Style="{StaticResource MenuTopBar}"/>
@@ -32,193 +23,172 @@
             <!--#region Баннер-->
             <Image Style="{StaticResource Banner}"></Image>
             <!--#endregion-->
-        </StackLayout>
 
-        
-        <!--Контент-->
-        <ScrollView Style="{StaticResource CursFrame}">
-            <StackLayout>
-                <StackLayout Style="{StaticResource CursStack}">
-                    <FlexLayout Style="{StaticResource CursFlex}">
-                        <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                        <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                    </FlexLayout>
+            <!--#region Контент-->
+            <ScrollView Style="{StaticResource ContentScroll}">
+                <StackLayout Style="{StaticResource ItemScroll}">
+                    <Frame Style="{StaticResource CursFrame}">
+                        <StackLayout Style="{StaticResource CursStack}">
+                            <FlexLayout Style="{StaticResource CursFlex}">
+                                <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
+                                <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
+                            </FlexLayout>
 
-                    <Label Style="{StaticResource CursDescLabel}">Описание</Label>
+                            <Label Style="{StaticResource CursDescLabel}">Описание</Label>
 
-                    <FlexLayout>
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                            <FlexLayout>
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                            </FlexLayout>
                         </StackLayout>
+                    </Frame>
 
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
+                    <Frame Style="{StaticResource CursFrame}">
+                        <StackLayout Style="{StaticResource CursStack}">
+                            <FlexLayout Style="{StaticResource CursFlex}">
+                                <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
+                                <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
+                            </FlexLayout>
 
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
+                            <Label Style="{StaticResource CursDescLabel}">Описание</Label>
 
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                            <FlexLayout>
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                            </FlexLayout>
                         </StackLayout>
-                    </FlexLayout>
+                    </Frame>
+
+                    <Frame Style="{StaticResource CursFrame}">
+                        <StackLayout Style="{StaticResource CursStack}">
+                            <FlexLayout Style="{StaticResource CursFlex}">
+                                <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
+                                <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
+                            </FlexLayout>
+
+                            <Label Style="{StaticResource CursDescLabel}">Описание</Label>
+
+                            <FlexLayout>
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Style="{StaticResource CursFrame}">
+                        <StackLayout Style="{StaticResource CursStack}">
+                            <FlexLayout Style="{StaticResource CursFlex}">
+                                <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
+                                <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
+                            </FlexLayout>
+
+                            <Label Style="{StaticResource CursDescLabel}">Описание</Label>
+
+                            <FlexLayout>
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                            </FlexLayout>
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
-                <StackLayout Style="{StaticResource CursStack}">
-                    <FlexLayout Style="{StaticResource CursFlex}">
-                        <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                        <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                    </FlexLayout>
+            </ScrollView>
+            <!--#endregion-->
 
-                    <Label Style="{StaticResource CursDescLabel}">Описание</Label>
-
-                    <FlexLayout>
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-                    </FlexLayout>
+            <!--#region Панель навигации-->
+            <FlexLayout  Style="{StaticResource NavFlex}">
+                <StackLayout Style="{StaticResource NavStack}">
+                    <Image Style="{StaticResource NavBtns}" 
+                                 Source="Images/NavigationBar/Nav_Home.png"></Image>
+                    <Label Style="{StaticResource NavLabels}">Домой</Label>
                 </StackLayout>
-                <StackLayout Style="{StaticResource CursStack}">
-                    <FlexLayout Style="{StaticResource CursFlex}">
-                        <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                        <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                    </FlexLayout>
 
-                    <Label Style="{StaticResource CursDescLabel}">Описание</Label>
-
-                    <FlexLayout>
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-                    </FlexLayout>
+                <StackLayout Style="{StaticResource NavStack}">
+                    <Image Style="{StaticResource NavBtns}" 
+                                Source="Images/NavigationBar/Nav_Workout.png"></Image>
+                    <Label Style="{StaticResource NavLabels}">Тренироваться</Label>
                 </StackLayout>
-                <StackLayout Style="{StaticResource CursStack}">
-                    <FlexLayout Style="{StaticResource CursFlex}">
-                        <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                        <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                    </FlexLayout>
 
-                    <Label Style="{StaticResource CursDescLabel}">Описание</Label>
-
-                    <FlexLayout>
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-                    </FlexLayout>
+                <StackLayout Style="{StaticResource NavStack}">
+                    <Image Style="{StaticResource NavBtns}" 
+                                 Source="Images/NavigationBar/Nav_News.png"></Image>
+                    <Label Style="{StaticResource NavLabels}">Новости</Label>
                 </StackLayout>
-                <StackLayout Style="{StaticResource CursStack}">
-                    <FlexLayout Style="{StaticResource CursFlex}">
-                        <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                        <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                    </FlexLayout>
 
-                    <Label Style="{StaticResource CursDescLabel}">Описание</Label>
-
-                    <FlexLayout>
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-
-                        <StackLayout Style="{StaticResource CursItemStack}">
-                            <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                            <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                        </StackLayout>
-                    </FlexLayout>
+                <StackLayout Style="{StaticResource NavStack}">
+                    <Image Style="{StaticResource NavBtns}" 
+                                 Source="Images/NavigationBar/Nav_Stats.png"></Image>
+                    <Label Style="{StaticResource NavLabels}">Статистика</Label>
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
 
-        <!--Панель навигации-->
-        <FlexLayout  Style="{StaticResource NavFlex}">
-            <StackLayout Style="{StaticResource NavStack}">
-                <Image Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_Home.png"></Image>
-                <Label Style="{StaticResource NavLabels}">Домой</Label>
-            </StackLayout>
-
-            <StackLayout Style="{StaticResource NavStack}">
-                <Image Style="{StaticResource NavBtns}" 
-                            Source="Images/NavigationBar/Nav_Workout.png"></Image>
-                <Label Style="{StaticResource NavLabels}">Тренироваться</Label>
-            </StackLayout>
-
-            <StackLayout Style="{StaticResource NavStack}">
-                <Image Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_News.png"></Image>
-                <Label Style="{StaticResource NavLabels}">Новости</Label>
-            </StackLayout>
-
-            <StackLayout Style="{StaticResource NavStack}">
-                <Image Style="{StaticResource NavBtns}" 
-                             Source="Images/NavigationBar/Nav_Stats.png"></Image>
-                <Label Style="{StaticResource NavLabels}">Статистика</Label>
-            </StackLayout>
-
-        </FlexLayout>
-    </FlexLayout>
-
-
+            </FlexLayout>
+            <!--#endregion-->
+    </StackLayout>
 </ContentPage>

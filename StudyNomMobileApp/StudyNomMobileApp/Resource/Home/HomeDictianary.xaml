@@ -3,27 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d">
+    <Style x:Key="MainStack" TargetType="StackLayout">
+        <Setter Property="Spacing" Value="0" />
+    </Style>
+    
     <!--#region Баннер-->
     <Style x:Key="Banner" TargetType="Image">
         <Setter Property="Source" Value="Images/Banner/Banner_Banner.png" />
         <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="HeightRequest" Value="60" />
     </Style>
     <!--#endregion-->
 
     <!--#region Курсы -->
-    <Style x:Key="CursFrame" TargetType="Frame">
-        <Setter Property="FlexLayout.Basis" Value="76%" />
-        <Setter Property="BackgroundColor" Value="#F5EBEB" />
+    <Style x:Key="ItemScroll" TargetType="StackLayout">
+        <Setter Property="Padding" Value="0,0,0,10" />
     </Style>
-    <Style x:Key="CursFlex" TargetType="FlexLayout">
-        <Setter Property="Direction" Value="Row"></Setter>
-        <Setter Property="JustifyContent" Value="SpaceBetween" />
+    <Style x:Key="CursFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="10, 10, 10, 0" />
+        <Setter Property="Padding" Value="10, 10, 10, 0" />
     </Style>
     <Style x:Key="CursStack" TargetType="StackLayout">
         <Setter Property="HeightRequest" Value="150" />
         <Setter Property="BackgroundColor" Value="#FFF" />
-        <Setter Property="Margin" Value="5,5,5,5" />
+    </Style>
+    <Style x:Key="CursFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
     </Style>
     <Style x:Key="CursNameLabel" TargetType="Label">
         <Setter Property="TextColor" Value="#050505" />
@@ -34,6 +43,11 @@
     </Style>
     <Style x:Key="CursDescLabel" TargetType="Label">
         <Setter Property="TextColor" Value="#696969" />
+    </Style>
+    <Style x:Key="CursItemImage" TargetType="image:CircleImage">
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
     </Style>
     <Style x:Key="CursItemStack" TargetType="StackLayout">
         <Setter Property="FlexLayout.Basis" Value="25%" />
