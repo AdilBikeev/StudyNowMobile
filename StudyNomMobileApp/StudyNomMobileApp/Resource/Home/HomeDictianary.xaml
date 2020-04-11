@@ -18,7 +18,7 @@
     <!--#endregion-->
 
     <!--#region Курсы -->
-    <Style x:Key="ItemScroll" TargetType="StackLayout">
+    <Style x:Key="ContentItemScroll" TargetType="StackLayout">
         <Setter Property="Padding" Value="0,0,0,10" />
     </Style>
     <Style x:Key="CursFrame" TargetType="Frame">
