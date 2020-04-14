@@ -6,7 +6,7 @@
              xmlns:base="clr-namespace:StudyNowMobileApp.Templates.Base"
              xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
-             x:Class="StudyNowMobileApp.MainPage"
+             x:Class="StudyNowMobileApp.Views.MainPage"
              BackgroundColor="#F5EBEB">
     <ContentPage.Resources>
         <ResourceDictionary Source="./../Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
@@ -23,43 +23,43 @@
             <!--#region Контент-->
             <ScrollView Style="{StaticResource ContentScroll}">
                 <StackLayout Style="{StaticResource ContentItemScroll}">
-                    <Frame Style="{StaticResource CursFrame}">
-                        <StackLayout Style="{StaticResource CursStack}">
-                            <FlexLayout Style="{StaticResource CursFlex}">
-                                <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
-                                <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
-                            </FlexLayout>
-                            <Label Style="{StaticResource CursDescLabel}">Описание</Label>
-                            <ScrollView Orientation="Horizontal">
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Style="{StaticResource CursItemStack}">
-                                        <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                                        <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                                    </StackLayout>
-
-                                    <StackLayout Style="{StaticResource CursItemStack}">
-                                        <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                                        <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                                    </StackLayout>
-
-                                    <StackLayout Style="{StaticResource CursItemStack}">
-                                        <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                                        <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                                    </StackLayout>
-
-                                    <StackLayout Style="{StaticResource CursItemStack}">
-                                        <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                                        <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                                    </StackLayout>
-                                    <StackLayout Style="{StaticResource CursItemStack}">
-                                        <image:CircleImage Style="{StaticResource CursItemImage}"/>
-                                        <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
-                                    </StackLayout>
+                <Frame Style="{StaticResource CursFrame}">
+                    <StackLayout Style="{StaticResource CursStack}">
+                        <FlexLayout Style="{StaticResource CursFlex}">
+                            <Label Style="{StaticResource CursNameLabel}">Избранные</Label>
+                            <Label Style="{StaticResource CursDescLabel}">Развернуть</Label>
+                        </FlexLayout>
+                        <Label Style="{StaticResource CursDescLabel}">Описание</Label>
+                        <ScrollView Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
                                 </StackLayout>
-                            </ScrollView>
-                        </StackLayout>
-                    </Frame>z
-                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                                <StackLayout Style="{StaticResource CursItemStack}">
+                                    <image:CircleImage Style="{StaticResource CursItemImage}"/>
+                                    <Label Style="{StaticResource CursItemName}">Тренироваться</Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
             </ScrollView>
             <!--#endregion-->
 
