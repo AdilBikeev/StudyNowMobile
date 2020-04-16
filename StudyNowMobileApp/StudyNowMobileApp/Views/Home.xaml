@@ -6,9 +6,13 @@
              xmlns:base="clr-namespace:StudyNowMobileApp.Templates.Base"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Home">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="./../Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Style="{StaticResource MainStack}">
             <base:TopBarView></base:TopBarView>
+            <Image Style="{StaticResource Banner}"></Image>
             <Label Text="Welcome to !"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
