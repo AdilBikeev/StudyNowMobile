@@ -12,10 +12,16 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout Style="{StaticResource MainStack}">
+
+            <!--#region Верхний Bar-->
             <base:TopBarView></base:TopBarView>
+            <!--#endregion-->
 
+            <!--#region Баннер-->
             <Image Style="{StaticResource Banner}"></Image>
+            <!--#endregion-->
 
+            <!--#region Контент-->
             <ScrollView Style="{StaticResource ContentScroll}">
                 <StackLayout Style="{StaticResource ContentItemScroll}">
                     <Frame Style="{StaticResource CursFrame}">
@@ -56,6 +62,7 @@
                     </Frame>
                 </StackLayout>
             </ScrollView>
+            <!--#endregion-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
