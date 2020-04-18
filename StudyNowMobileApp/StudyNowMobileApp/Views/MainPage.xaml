@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:base="clr-namespace:StudyNowMobileApp.Templates.Base"
              xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
                               
              xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.BottomTabbedPage.Forms"
                                 
-             xmlns:views="clr-namespace:StudyNowMobileApp.Views"
+             xmlns:views="clr-namespace:StudyNowMobileApp.Views.Main"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.MainPage"
              BackgroundColor="#7BEEA9">

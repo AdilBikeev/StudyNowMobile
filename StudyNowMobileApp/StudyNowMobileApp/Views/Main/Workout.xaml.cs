@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StudyNowMobileApp.Views
+namespace StudyNowMobileApp.Views.Main
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Workout : ContentPage
