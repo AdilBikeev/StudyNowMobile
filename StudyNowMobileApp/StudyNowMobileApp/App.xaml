@@ -17,19 +17,27 @@
 
         <Style x:Key="MenuTopBar" TargetType="ImageButton">
             <Setter Property="BackgroundColor" Value="#EF6767" />
-            <Setter Property="Padding" Value="10,0,0,0" />
+            <Setter Property="Padding" Value="10, 0, 0, 0" />
             <Setter Property="Source" Value="Images/TopBar/TopBar_Menu.png" />
         </Style>
 
-        <Style x:Key="SearchTopBar" TargetType="Entry">
-            <Setter Property="FontSize" Value="10" />
+        <Style x:Key="FrameSearchTopBar" TargetType="Frame">
             <Setter Property="FlexLayout.Basis" Value="60%"></Setter>
+            <Setter Property="CornerRadius" Value="50" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="0" />
         </Style>
-
+        
+        <Style x:Key="SearchTopBar" TargetType="SearchBar">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Placeholder" Value="Поиск" />
+            <Setter Property="BackgroundColor" Value="#EEE" />
+        </Style>
+        
         <Style x:Key="ProfileTopBar" TargetType="image:CircleImage">
             <Setter Property="Source" Value="Images/TopBar/TopBar_Profile.png" />
             <Setter Property="Aspect" Value="AspectFill" />
-            <Setter Property="Margin" Value="5,5,10,5" />
+            <Setter Property="Margin" Value="5, 5, 10, 5" />
         </Style>
         <!--#endregion-->
         
