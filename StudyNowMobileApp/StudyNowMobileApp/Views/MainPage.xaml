@@ -8,15 +8,22 @@
              xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.BottomTabbedPage.Forms"
                                 
              xmlns:views="clr-namespace:StudyNowMobileApp.Views.Main"
+             xmlns:localized="clr-namespace:StudyNowMobileApp.Localization"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.MainPage"
-             BackgroundColor="#7BEEA9">
-    <views:Home Title="Домой" BackgroundColor="Bisque"
-                        IconImageSource="Images/NavigationBar/Nav_Home.png"></views:Home>
-    <views:Workout Title="Тренироваться" BackgroundColor="Red"
-                        IconImageSource="Images/NavigationBar/Nav_Workout.png"></views:Workout>
-    <views:News Title="Новости" BackgroundColor="Blue"
-                        IconImageSource="Images/NavigationBar/Nav_News.png"></views:News>
-    <views:Stats Title="Статистика" BackgroundColor="Yellow"
-                        IconImageSource="Images/NavigationBar/Nav_Stats.png"></views:Stats>
+             BackgroundColor="#7BEEA9"
+             NavigationPage.HasNavigationBar="False">
+    <views:Home 
+                Title="{x:Static localized:LocalizedText.HomeIconTitle}" 
+                BackgroundColor="Bisque"
+                IconImageSource="Images/NavigationBar/Nav_Home.png"></views:Home>
+    <views:Workout Title="{x:Static localized:LocalizedText.WorkoutIconTitle}"  
+                   BackgroundColor="Red"
+                   IconImageSource="Images/NavigationBar/Nav_Workout.png"></views:Workout>
+    <views:News Title="{x:Static localized:LocalizedText.NewsIconTitle}"  
+                BackgroundColor="Blue"
+                IconImageSource="Images/NavigationBar/Nav_News.png"></views:News>
+    <views:Stats Title="{x:Static localized:LocalizedText.StatsIconTitle}" 
+                 BackgroundColor="Yellow"
+                 IconImageSource="Images/NavigationBar/Nav_Stats.png"></views:Stats>
 </naxam:BottomTabbedPage>

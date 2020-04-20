@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StudyNowMobileApp.Views.Main
+namespace StudyNowMobileApp.Views.ToolsMenu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class ToolsPage : ContentPage
     {
-        public Home()
+        public ToolsPage()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel() { Navigation = this.Navigation };
+            BindingContext = new ToolsViewModel() { Navigation = this.Navigation };
         }
     }
 }

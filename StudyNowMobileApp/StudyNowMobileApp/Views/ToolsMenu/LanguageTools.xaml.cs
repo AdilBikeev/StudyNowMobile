@@ -1,5 +1,4 @@
-﻿using StudyNowMobileApp.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace StudyNowMobileApp.Views.Main
+namespace StudyNowMobileApp.Views.ToolsMenu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class LanguageTools : ContentPage
     {
-        public Home()
+        public LanguageTools()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel() { Navigation = this.Navigation };
         }
     }
 }

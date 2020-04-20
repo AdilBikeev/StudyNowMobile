@@ -105,9 +105,6 @@
     <AndroidResource Include="Resources\drawable\Images\NavigationBar\Nav_Workout.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Images\TopBar\TopBar_Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Images\TopBar\TopBar_Profile.png" />
   </ItemGroup>
   <ItemGroup>
@@ -129,12 +126,6 @@
     <AndroidResource Include="Resources\drawable\TopBar_Profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\TopBar_Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Banner_Banner.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\StudyNowMobileApp\StudyNowMobileApp.csproj">
       <Project>{fc6f5b7d-21de-417e-a54e-b2c8b46639dc}</Project>
       <Name>StudyNowMobileApp</Name>
@@ -145,6 +136,15 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Images\TopBar\TopBar_Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\TopBar_Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Banner_Banner.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

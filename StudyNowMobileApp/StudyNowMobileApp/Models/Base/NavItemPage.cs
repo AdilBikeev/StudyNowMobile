@@ -8,7 +8,7 @@ namespace StudyNowMobileApp.Models.Base
     /// <summary>
     /// Навиг. элементы.
     /// </summary>
-    internal class NavItemImage
+    public class NavItemPage
     {
         /// <summary>
         /// Описание навиг. элемента (его имя).
@@ -16,14 +16,8 @@ namespace StudyNowMobileApp.Models.Base
         public string Title { get; set; }
 
         /// <summary>
-        /// Путь к картинке навиг. элемента.
+        /// Тип страницы.
         /// </summary>
-        public string Path { get; set; }
-
-        public NavItemImage (string title, string path)
-        {
-            this.Title = title;
-            this.Path = path;
-        }
+        public Type Type { get; set; }
     }
 }

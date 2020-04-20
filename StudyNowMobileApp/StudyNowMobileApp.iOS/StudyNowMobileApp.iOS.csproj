@@ -146,9 +146,6 @@
     <BundleResource Include="Resources\Images\NavigationBar\Nav_Stats.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images\TopBar\TopBar_Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Images\TopBar\TopBar_Profile.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,12 +167,6 @@
     <BundleResource Include="Resources\Nav_Workout.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\TopBar_Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\TopBar_Profile.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\StudyNowMobileApp\StudyNowMobileApp.csproj">
       <Project>{fc6f5b7d-21de-417e-a54e-b2c8b46639dc}</Project>
       <Name>StudyNowMobileApp</Name>
@@ -186,5 +177,11 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\TopBar\TopBar_Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\TopBar_Tools.png" />
   </ItemGroup>
 </Project>

@@ -17,8 +17,8 @@
     <None Remove="Images\NavigationBar\Nav_News.png" />
     <None Remove="Images\NavigationBar\Nav_Stats.png" />
     <None Remove="Images\NavigationBar\Nav_Workout.png" />
-    <None Remove="Images\TopBar\TopBar_Menu.png" />
     <None Remove="Images\TopBar\TopBar_Profile.png" />
+    <None Remove="Images\TopBar\TopBar_Tools.png" />
     <None Remove="MainPage.xaml~RF1d45b22b.TMP" />
   </ItemGroup>
 
@@ -29,7 +29,7 @@
     <EmbeddedResource Include="Images\NavigationBar\Nav_News.png" />
     <EmbeddedResource Include="Images\NavigationBar\Nav_Stats.png" />
     <EmbeddedResource Include="Images\NavigationBar\Nav_Workout.png" />
-    <EmbeddedResource Include="Images\TopBar\TopBar_Menu.png" />
+    <EmbeddedResource Include="Images\TopBar\TopBar_Tools.png" />
     <EmbeddedResource Include="Images\TopBar\TopBar_Profile.png" />
   </ItemGroup>
 
@@ -41,6 +41,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Localization\LocalizedText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizedText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\LocalizedText.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\LocalizedText.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resource\Home\HomeDictianary.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -56,9 +66,23 @@
     <EmbeddedResource Update="Views\Main\Workout.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ToolsMenu\ToolsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Templates\Base\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Localization\LocalizedText.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ToolsMenu\LanguageTools.xaml.cs">
+      <DependentUpon>LanguageTools.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -8,24 +8,14 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using StudyNowMobileApp.Views.ToolsMenu;
 
 namespace StudyNowMobileApp.ViewModels
 {
-    public class HomeViewModel: INotifyPropertyChanged
+    public class HomeViewModel: BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// Список курсов.
-        /// </summary>
-        public IList<Curs> Curs { get; private set; }
-
         private IList<Curs> searcherCurs;
+        private string querySearchBar = string.Empty;
 
         /// <summary>
         /// Искомые курсы.
@@ -44,8 +34,14 @@ namespace StudyNowMobileApp.ViewModels
             }
         }
 
+        /// <summary>
+        /// Список курсов.
+        /// </summary>
+        public IList<Curs> Curs { get; private set; }
+
         public HomeViewModel()
         {
+            NavigateToolsCommand = new Command(NavigateTools);
             searcherCurs = Curs = new List<Curs>
             {
                 new Curs(){ Name = "Избранное", Description = "Описание", 
@@ -72,9 +68,6 @@ namespace StudyNowMobileApp.ViewModels
                 }
             };
         }
-
-
-        private string querySearchBar = string.Empty;
 
         /// <summary>
         /// Строка вводимоя пользователем в строку поиска.
@@ -106,5 +99,15 @@ namespace StudyNowMobileApp.ViewModels
                 SearcherCurs = Curs;
             }
         });
+
+        /// <summary>
+        /// Взвращает или задает логику перехода на страницу с настройками. 
+        /// </summary>
+        public ICommand NavigateToolsCommand { get; protected set; }
+
+        private void NavigateTools()
+        {
+            Navigation.PushAsync(new ToolsPage());
+        }
     }
 }
