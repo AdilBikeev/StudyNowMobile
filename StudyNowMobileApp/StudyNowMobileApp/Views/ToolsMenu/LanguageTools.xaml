@@ -7,11 +7,28 @@
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.ToolsMenu.LanguageTools"
              Title="{x:Static localized:LocalizedText.ToolsLanguageTitle}">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../../Resource/Tools/LanguageToolsDictianary.xaml"></ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Страница находися на стадии разработки"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Style="{StaticResource ListLangStack}">
+                <Frame>
+                    <StackLayout Style="{StaticResource LangItem}">
+                        <Image Source="Images/Tools/Language/English.png"></Image>
+                        <Label Text="Анлгийский"></Label>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout Style="{StaticResource LangItem}">
+                        <Image Source="Images/Tools/Language/Russian.png"></Image>
+                        <Label Text="Россия"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

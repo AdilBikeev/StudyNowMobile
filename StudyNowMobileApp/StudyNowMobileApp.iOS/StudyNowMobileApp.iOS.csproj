@@ -184,4 +184,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\TopBar_Tools.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Tools\Language\English.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Images\Tools\Language\Russian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\English.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Russian.png" />
+  </ItemGroup>
 </Project>

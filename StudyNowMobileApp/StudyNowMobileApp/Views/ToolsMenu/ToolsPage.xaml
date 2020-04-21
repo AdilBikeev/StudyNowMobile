@@ -9,6 +9,10 @@
              x:Class="StudyNowMobileApp.Views.ToolsMenu.ToolsPage"
              Title="{x:Static localized:LocalizedText.ToolsPageTitle}">
 
+    <ContentPage.Resources>
+        <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="LanguageToolsBtn"
