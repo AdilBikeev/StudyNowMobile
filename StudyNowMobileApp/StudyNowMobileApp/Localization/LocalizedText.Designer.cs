@@ -70,6 +70,24 @@ namespace StudyNowMobileApp.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Английский.
+        /// </summary>
+        public static string LabelLangEnText {
+            get {
+                return ResourceManager.GetString("LabelLangEnText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Русский.
+        /// </summary>
+        public static string LabelLangRuText {
+            get {
+                return ResourceManager.GetString("LabelLangRuText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Новости.
         /// </summary>
         public static string NewsIconTitle {

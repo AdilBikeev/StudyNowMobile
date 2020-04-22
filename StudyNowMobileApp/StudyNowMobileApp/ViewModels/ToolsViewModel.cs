@@ -44,6 +44,7 @@ namespace StudyNowMobileApp.ViewModels
         };
 
         public ICommand NavigateToolsPageCommand { get; private set; }
+        protected override List<string> propertyNames { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public ToolsViewModel()
         {

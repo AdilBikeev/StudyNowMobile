@@ -120,6 +120,12 @@
   <data name="HomeIconTitle" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="LabelLangEnText" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LabelLangRuText" xml:space="preserve">
+    <value>Russian</value>
+  </data>
   <data name="NewsIconTitle" xml:space="preserve">
     <value>News</value>
   </data>

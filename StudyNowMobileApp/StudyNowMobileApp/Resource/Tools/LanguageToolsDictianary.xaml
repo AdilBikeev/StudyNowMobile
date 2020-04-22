@@ -5,13 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d">
 
-    <Style x:Key="ListLangStack" TargetType="StackLayout">
-        <Setter Property="Padding" Value="10, 10, 10, 20" />
+    <Style x:Key="ListLang" TargetType="ListView">
+        <Setter Property="Margin" Value="5, 5, 5, 10" />
+        <Setter Property="RowHeight" Value="70" />
+        <Setter Property="SeparatorVisibility" Value="None" />
     </Style>
     
     <Style TargetType="Frame">
         <Setter Property="CornerRadius" Value="10" />
-        <Setter Property="Margin" Value="5, 5, 5, 0" />
+        <Setter Property="Margin" Value="5, 5, 5, 5" />
         <Setter Property="Padding" Value="10" />
     </Style>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudyNowMobileApp.ViewModels.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace StudyNowMobileApp.Views.ToolsMenu
         public LanguageTools()
         {
             InitializeComponent();
+            BindingContext = new LanguageToolsViewModel() { Navigation = this.Navigation };
         }
     }
 }

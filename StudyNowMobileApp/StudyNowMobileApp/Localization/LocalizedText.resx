@@ -121,6 +121,14 @@
     <value>Домой</value>
     <comment>Текст, отображаемый под значком иконки Home</comment>
   </data>
+  <data name="LabelLangEnText" xml:space="preserve">
+    <value>Английский</value>
+    <comment>Текст, отображаемый на кнопке при выборе английского языка</comment>
+  </data>
+  <data name="LabelLangRuText" xml:space="preserve">
+    <value>Русский</value>
+    <comment>Текст, отображаемый на кнопке при выборе русского языка</comment>
+  </data>
   <data name="NewsIconTitle" xml:space="preserve">
     <value>Новости</value>
     <comment>Текст, отображаемый под значком иконки News</comment>

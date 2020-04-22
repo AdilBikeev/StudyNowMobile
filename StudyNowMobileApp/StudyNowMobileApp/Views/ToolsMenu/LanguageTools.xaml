@@ -3,32 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:localized="clr-namespace:StudyNowMobileApp.Localization"
+             xmlns:localized="clr-namespace:StudyNowMobileApp.Localization" 
+             xmlns:tools="clr-namespace:StudyNowMobileApp.ViewModels.Tools"
+             xmlns:helpers="clr-namespace:StudyNowMobileApp.Hellpers"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.ToolsMenu.LanguageTools"
-             Title="{x:Static localized:LocalizedText.ToolsLanguageTitle}">
-    
+             Title="{Binding Title, Mode=TwoWay}">
+
     <ContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
         <ResourceDictionary Source="./../../Resource/Tools/LanguageToolsDictianary.xaml"></ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Style="{StaticResource ListLangStack}">
-                <Frame>
-                    <StackLayout Style="{StaticResource LangItem}">
-                        <Image Source="Images/Tools/Language/English.png"></Image>
-                        <Label Text="Анлгийский"></Label>
-                    </StackLayout>
-                </Frame>
-                <Frame>
-                    <StackLayout Style="{StaticResource LangItem}">
-                        <Image Source="Images/Tools/Language/Russian.png"></Image>
-                        <Label Text="Россия"></Label>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+        <ListView ItemsSource="{Binding Languages}"
+                  Style="{StaticResource ListLang}"
+                  SelectedItem="{Binding ChooseLangCommand}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                            <StackLayout Style="{StaticResource LangItem}">
+                                <Image Source="{Binding ImageSource}"></Image>
+                                <Label
+                            Text="{Binding DisplayName}"></Label>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

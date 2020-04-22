@@ -104,6 +104,7 @@ namespace StudyNowMobileApp.ViewModels
         /// Взвращает или задает логику перехода на страницу с настройками. 
         /// </summary>
         public ICommand NavigateToolsCommand { get; protected set; }
+        protected override List<string> propertyNames { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private void NavigateTools()
         {
