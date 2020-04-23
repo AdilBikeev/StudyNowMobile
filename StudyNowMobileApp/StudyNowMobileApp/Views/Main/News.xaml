@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StudyNowMobileApp.Views.Main.News">
+             x:Class="StudyNowMobileApp.Views.Main.News"
+             Title="Новости">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Страница находися на стадии разработки"

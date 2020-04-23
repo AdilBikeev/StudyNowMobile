@@ -12,8 +12,6 @@ namespace StudyNowMobileApp.ViewModels
 {
     public class ToolsViewModel: BaseViewModel
     {
-        public string Title { get => LocalizedText.ToolsPageTitle; set => throw new NotImplementedException(); }
-
         /// <summary>
         /// Список настроек приложения.
         /// </summary>
@@ -45,11 +43,12 @@ namespace StudyNowMobileApp.ViewModels
         {
             get => new List<string>()
             {
-                nameof(Title),
+                nameof(TitlePage),
                 nameof(Tools)
             };
             set => throw new NotImplementedException(); 
         }
+        public override string TitlePage { get => LocalizedText.ToolsPageTitle; set => throw new NotImplementedException(); }
 
         public ToolsViewModel() { }
     }

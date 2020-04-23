@@ -9,7 +9,7 @@
              xmlns:helpers="clr-namespace:StudyNowMobileApp.Hellpers"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.ToolsMenu.LanguageTools"
-             Title="{Binding Title, Mode=TwoWay}">
+             Title="{Binding TitlePage}">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>

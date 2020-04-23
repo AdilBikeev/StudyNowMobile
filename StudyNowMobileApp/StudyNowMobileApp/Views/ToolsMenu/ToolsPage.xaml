@@ -8,7 +8,7 @@
              xmlns:localized="clr-namespace:StudyNowMobileApp.Localization"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.ToolsMenu.ToolsPage"
-             Title="{Binding Title}">
+             Title="{Binding TitlePage}">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>

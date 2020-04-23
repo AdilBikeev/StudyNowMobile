@@ -12,8 +12,6 @@ namespace StudyNowMobileApp.ViewModels.Tools
 {
     public class LanguageToolsViewModel: BaseViewModel
     {
-        public string Title { get => LocalizedText.ToolsLanguageTitle; set => new NotImplementedException(); }
-
         //public ICommand ChooseLangCommand { get; private set; }
         public Language ChooseLangCommand 
         { 
@@ -23,7 +21,7 @@ namespace StudyNowMobileApp.ViewModels.Tools
 
         protected override List<string> propertyNames { get; set; } = new List<string>()
         {
-            nameof(Title),
+            nameof(TitlePage),
             nameof(Languages)
         };
 
@@ -40,6 +38,7 @@ namespace StudyNowMobileApp.ViewModels.Tools
 
             set => new NotImplementedException();
         }
+        public override string TitlePage { get => LocalizedText.ToolsLanguageTitle; set => new NotImplementedException(); }
 
         public LanguageToolsViewModel() { }
 

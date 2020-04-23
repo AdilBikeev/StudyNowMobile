@@ -18,6 +18,12 @@ namespace StudyNowMobileApp.ViewModels
         private IList<Curs> searcherCurs;
         private string querySearchBar = string.Empty;
 
+        public override string TitlePage
+        {
+            get => LocalizedText.HomeIconTitle;
+            set => new NotImplementedException();
+        }
+
         /// <summary>
         /// Искомые курсы.
         /// </summary>
@@ -118,7 +124,8 @@ namespace StudyNowMobileApp.ViewModels
         {
             get => new List<string>()
             {
-                nameof(PlaceHolderText)
+                nameof(PlaceHolderText),
+                nameof(TitlePage)
             };
             set => throw new NotImplementedException(); 
         }

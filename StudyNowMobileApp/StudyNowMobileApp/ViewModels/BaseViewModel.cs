@@ -10,6 +10,11 @@ namespace StudyNowMobileApp.ViewModels
     public abstract class BaseViewModel: INotifyPropertyChanged
     {
         /// <summary>
+        /// Название страницы для отображения.
+        /// </summary>
+        public abstract string TitlePage { get; set; }
+
+        /// <summary>
         /// Список имен свойств ViewModel.
         /// </summary>
         protected abstract List<string> propertyNames { get; set; }
