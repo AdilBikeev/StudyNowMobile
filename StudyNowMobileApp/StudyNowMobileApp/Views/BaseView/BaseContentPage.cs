@@ -18,7 +18,10 @@ namespace StudyNowMobileApp.Views.BaseView
 
         protected override void OnDisappearing()
         {
-            this.vm.UpdatePropertyChanged();
+            if(vm != null)
+            {
+                this.vm.UpdatePropertyChanged();
+            }
             base.OnDisappearing();
         }
     }

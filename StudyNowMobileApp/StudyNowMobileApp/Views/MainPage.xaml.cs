@@ -24,10 +24,10 @@ namespace StudyNowMobileApp.Views
             BindingContext = this.vm;
         }
 
-        protected override void OnAppearing()
+        protected override void OnDisappearing()
         {
             this.vm.UpdatePropertyChanged();
-            base.OnAppearing();
+            base.OnDisappearing();
         }
     }
 }
