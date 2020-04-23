@@ -1,4 +1,5 @@
 ﻿using StudyNowMobileApp.ViewModels;
+using StudyNowMobileApp.Views.BaseView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,11 @@ using Xamarin.Forms.Xaml;
 namespace StudyNowMobileApp.Views.ToolsMenu
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ToolsPage : ContentPage
+    public partial class ToolsPage : BaseContentPage
     {
-        public ToolsPage()
+        public ToolsPage(BaseViewModel viewModel)
         {
+            this.vm = viewModel;
             InitializeComponent();
             BindingContext = new ToolsViewModel() { Navigation = this.Navigation };
         }

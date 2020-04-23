@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<baseview:BaseContentPage  xmlns:baseview="clr-namespace:StudyNowMobileApp.Views.BaseView"
+                           xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,15 +9,11 @@
              xmlns:localized="clr-namespace:StudyNowMobileApp.Localization"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Main.Home">
-    <ContentPage.Resources>
+    <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
-    </ContentPage.Resources>
-    
-    <!--<ContentPage.BindingContext>
-        <local:HomeViewModel></local:HomeViewModel>
-    </ContentPage.BindingContext>-->
+    </baseview:BaseContentPage.Resources>
 
-    <ContentPage.Content>
+    <baseview:BaseContentPage.Content>
         <StackLayout Style="{StaticResource MainStack}">
             
             <!--#region Верхний Bar-->
@@ -31,7 +28,7 @@
                         x:Name="searchBar"
                         Style="{StaticResource SearchTopBar}"
                         Text="{Binding QuerySearchBar}"
-                        Placeholder="{x:Static localized:LocalizedText.SearchBarPlaceHolder}"/>
+                        Placeholder="{Binding PlaceHolderText}"/>
                 </Frame>
 
                 <image:CircleImage Style="{StaticResource ProfileTopBar}"/>
@@ -89,5 +86,5 @@
             </ListView>
             <!--#endregion-->
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </baseview:BaseContentPage.Content>
+</baseview:BaseContentPage>

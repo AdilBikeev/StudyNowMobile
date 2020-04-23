@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 using StudyNowMobileApp.Views.ToolsMenu;
+using StudyNowMobileApp.Localization;
 
 namespace StudyNowMobileApp.ViewModels
 {
@@ -87,6 +88,15 @@ namespace StudyNowMobileApp.ViewModels
         }
 
         /// <summary>
+        /// Строка, отображаемая, когда SearchBar не заполнен.
+        /// </summary>
+        public string PlaceHolderText
+        {
+            get => LocalizedText.SearchBarPlaceHolder;
+            set => new NotImplementedException();
+        }
+
+        /// <summary>
         /// Фильрует список курсов по названию, кторый интересует пользователя.
         /// </summary>
         public ICommand PerformSearch => new Command<string>((string query) =>
@@ -104,11 +114,18 @@ namespace StudyNowMobileApp.ViewModels
         /// Взвращает или задает логику перехода на страницу с настройками. 
         /// </summary>
         public ICommand NavigateToolsCommand { get; protected set; }
-        protected override List<string> propertyNames { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        protected override List<string> propertyNames 
+        {
+            get => new List<string>()
+            {
+                nameof(PlaceHolderText)
+            };
+            set => throw new NotImplementedException(); 
+        }
 
         private void NavigateTools()
         {
-            Navigation.PushAsync(new ToolsPage());
+            Navigation.PushAsync(new ToolsPage(this));
         }
     }
 }

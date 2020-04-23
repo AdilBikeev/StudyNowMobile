@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<baseview:BaseContentPage  xmlns:baseview="clr-namespace:StudyNowMobileApp.Views.BaseView"
+                           xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -10,14 +11,13 @@
              x:Class="StudyNowMobileApp.Views.ToolsMenu.LanguageTools"
              Title="{Binding Title, Mode=TwoWay}">
 
-    <ContentPage.Resources>
+    <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
         <ResourceDictionary Source="./../../Resource/Tools/LanguageToolsDictianary.xaml"></ResourceDictionary>
-    </ContentPage.Resources>
+    </baseview:BaseContentPage.Resources>
 
-    <ContentPage.Content>
+    <baseview:BaseContentPage.Content>
         <ListView ItemsSource="{Binding Languages}"
-                  Style="{StaticResource ListLang}"
                   SelectedItem="{Binding ChooseLangCommand}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -33,5 +33,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ContentPage.Content>
-</ContentPage>
+    </baseview:BaseContentPage.Content>
+</baseview:BaseContentPage>

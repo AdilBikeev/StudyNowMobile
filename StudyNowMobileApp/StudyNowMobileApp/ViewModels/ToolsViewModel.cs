@@ -1,5 +1,6 @@
 ﻿using StudyNowMobileApp.Localization;
 using StudyNowMobileApp.Models.Base;
+using StudyNowMobileApp.Models.Tools;
 using StudyNowMobileApp.Views.ToolsMenu;
 using System;
 using System.Collections.Generic;
@@ -11,54 +12,45 @@ namespace StudyNowMobileApp.ViewModels
 {
     public class ToolsViewModel: BaseViewModel
     {
-        ///// <summary>
-        ///// Список настроек.
-        ///// </summary>
-        //public IList<NavItemPage> ToolsItem { get; private set; }
-
-        //private NavItemPage navigateToolsSelectedItem = null;
-
-        ///// <summary>
-        ///// Взвращает или задает логику перехода на страницу с настройками. 
-        ///// </summary>
-        //public NavItemPage NavigateToolsSelectedItem 
-        //{ 
-        //    get { return navigateToolsSelectedItem; } 
-        //    set 
-        //    {
-        //        if (value != null)
-        //        {
-        //            NotifyPropertyChanged(nameof(NavigateToolsSelectedItem));
-        //            Page page = (Page)Activator.CreateInstance(value.Type);
-        //            Navigation.PushAsync(page);
-        //        }
-        //    } 
-        //}
+        public string Title { get => LocalizedText.ToolsPageTitle; set => throw new NotImplementedException(); }
 
         /// <summary>
-        /// Словарь, сопоставляющий названию настройки, соответствующую ей страницу.
+        /// Список настроек приложения.
         /// </summary>
-        private Dictionary<string, Type> pagesTools = new Dictionary<string, Type>()
+        public List<Tool> Tools
         {
-            [LocalizedText.ToolsLanguageTitle] = typeof(LanguageTools)
-        };
-
-        public ICommand NavigateToolsPageCommand { get; private set; }
-        protected override List<string> propertyNames { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public ToolsViewModel()
-        {
-            NavigateToolsPageCommand = new Command<string>(NavigateToolsPage);
+            get => new List<Tool>()
+            {
+                new Tool() { Name = LocalizedText.ToolsLanguageTitle, typePage = new LanguageTools(this) }
+            };
+            set => throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Производит переход по указанной странице настроек.
-        /// </summary>
-        /// <param name="typePage">Класс страницы, на которую нужно перейти.</param>
-        private void NavigateToolsPage(string title)
+        public Tool SelectedToolCommand
         {
-            Page page = (Page)Activator.CreateInstance(pagesTools[title]);
-            Navigation.PushAsync(page);
+            get => null;
+            set
+            {
+                if(value != null)
+                {
+                    //Page page = (Page)Activator.CreateInstance(value.typePage);
+                    //Navigation.PushAsync(page);
+                    Navigation.PushAsync(value.typePage);
+                    this.UpdatePropertyChanged();
+                }
+            }
         }
+
+        protected override List<string> propertyNames 
+        {
+            get => new List<string>()
+            {
+                nameof(Title),
+                nameof(Tools)
+            };
+            set => throw new NotImplementedException(); 
+        }
+
+        public ToolsViewModel() { }
     }
 }

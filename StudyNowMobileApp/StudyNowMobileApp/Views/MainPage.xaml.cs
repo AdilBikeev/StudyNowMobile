@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Naxam.Controls.Forms;
+using StudyNowMobileApp.ViewModels;
 
 namespace StudyNowMobileApp.Views
 {
@@ -14,9 +15,19 @@ namespace StudyNowMobileApp.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : BottomTabbedPage
     {
+        private BaseViewModel vm;
+
         public MainPage()
         {
+            this.vm = new MainViewModel();
             InitializeComponent();
+            BindingContext = this.vm;
+        }
+
+        protected override void OnAppearing()
+        {
+            this.vm.UpdatePropertyChanged();
+            base.OnAppearing();
         }
     }
 }

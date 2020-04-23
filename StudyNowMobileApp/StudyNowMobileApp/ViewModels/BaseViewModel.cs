@@ -26,7 +26,7 @@ namespace StudyNowMobileApp.ViewModels
         /// Обновляет значения всех свойств на ViewModel.
         /// </summary>
         /// <param name="propertyNames">Список имен свойств ViewModel.</param>
-        protected void UpdatePropertyChanged()
+        public void UpdatePropertyChanged()
         {
             foreach (var name in this.propertyNames)
             {

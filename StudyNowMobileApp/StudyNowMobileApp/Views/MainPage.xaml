@@ -14,16 +14,16 @@
              BackgroundColor="#7BEEA9"
              NavigationPage.HasNavigationBar="False">
     <views:Home 
-                Title="{x:Static localized:LocalizedText.HomeIconTitle}" 
+                Title="{Binding HomeTitle}" 
                 BackgroundColor="Bisque"
                 IconImageSource="Images/NavigationBar/Nav_Home.png"></views:Home>
-    <views:Workout Title="{x:Static localized:LocalizedText.WorkoutIconTitle}"  
+    <views:Workout Title="{Binding WorkoutTitle}"  
                    BackgroundColor="Red"
                    IconImageSource="Images/NavigationBar/Nav_Workout.png"></views:Workout>
-    <views:News Title="{x:Static localized:LocalizedText.NewsIconTitle}"  
+    <views:News Title="{Binding NewsTitle}"  
                 BackgroundColor="Blue"
                 IconImageSource="Images/NavigationBar/Nav_News.png"></views:News>
-    <views:Stats Title="{x:Static localized:LocalizedText.StatsIconTitle}" 
+    <views:Stats Title="{Binding StatsTitle}" 
                  BackgroundColor="Yellow"
                  IconImageSource="Images/NavigationBar/Nav_Stats.png"></views:Stats>
 </naxam:BottomTabbedPage>

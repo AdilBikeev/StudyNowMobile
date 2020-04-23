@@ -22,6 +22,7 @@
     <None Remove="Images\TopBar\TopBar_Profile.png" />
     <None Remove="Images\TopBar\TopBar_Tools.png" />
     <None Remove="MainPage.xaml~RF1d45b22b.TMP" />
+    <None Remove="Views\Main\Home.xaml.cs~RF104573b6.TMP" />
   </ItemGroup>
 
   <ItemGroup>
