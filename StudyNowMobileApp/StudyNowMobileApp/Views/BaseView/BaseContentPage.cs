@@ -16,10 +16,10 @@ namespace StudyNowMobileApp.Views.BaseView
         /// </summary>
         protected BaseViewModel vm;
 
-        protected override void OnAppearing()
+        protected override void OnDisappearing()
         {
             this.vm.UpdatePropertyChanged();
-            base.OnAppearing();
+            base.OnDisappearing();
         }
     }
 }
