@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Templates\**" />
+    <EmbeddedResource Remove="Templates\**" />
+    <None Remove="Templates\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="MainPage.xaml~RF1d45b22b.TMP" />
     <None Remove="Views\Main\Home.xaml.cs~RF104573b6.TMP" />
   </ItemGroup>
@@ -51,10 +57,6 @@
     <EmbeddedResource Update="Views\ToolsMenu\ToolsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Templates\Base\" />
   </ItemGroup>
 
   <ItemGroup>
