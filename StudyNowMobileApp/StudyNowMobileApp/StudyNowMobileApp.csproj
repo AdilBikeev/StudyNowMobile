@@ -11,31 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Banner\Banner_Banner.png" />
-    <None Remove="Images\Home\TopBar_Profile.png" />
-    <None Remove="Images\NavigationBar\Nav_Home.png" />
-    <None Remove="Images\NavigationBar\Nav_News.png" />
-    <None Remove="Images\NavigationBar\Nav_Stats.png" />
-    <None Remove="Images\NavigationBar\Nav_Workout.png" />
-    <None Remove="Images\Tools\Language\english.png" />
-    <None Remove="Images\Tools\Language\russian.png" />
-    <None Remove="Images\TopBar\TopBar_Profile.png" />
-    <None Remove="Images\TopBar\TopBar_Tools.png" />
     <None Remove="MainPage.xaml~RF1d45b22b.TMP" />
     <None Remove="Views\Main\Home.xaml.cs~RF104573b6.TMP" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Images\Banner\Banner_Banner.png" />
-    <EmbeddedResource Include="Images\Home\TopBar_Profile.png" />
-    <EmbeddedResource Include="Images\NavigationBar\Nav_Home.png" />
-    <EmbeddedResource Include="Images\NavigationBar\Nav_News.png" />
-    <EmbeddedResource Include="Images\NavigationBar\Nav_Stats.png" />
-    <EmbeddedResource Include="Images\NavigationBar\Nav_Workout.png" />
-    <EmbeddedResource Include="Images\Tools\Language\English.png" />
-    <EmbeddedResource Include="Images\Tools\Language\Russian.png" />
-    <EmbeddedResource Include="Images\TopBar\TopBar_Tools.png" />
-    <EmbeddedResource Include="Images\TopBar\TopBar_Profile.png" />
   </ItemGroup>
 
   <ItemGroup>
