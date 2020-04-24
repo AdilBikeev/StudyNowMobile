@@ -42,6 +42,10 @@
             <!--#endregion-->
 
             <!--#region Контент-->
+            <ActivityIndicator IsRunning="{Binding IsLoading, Mode=TwoWay}"
+                               IsVisible="{Binding IsLoading, Mode=TwoWay}"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
             <ListView Style="{StaticResource CursItemList}"
                       ItemsSource="{Binding SearcherCurs}">
                 <ListView.ItemTemplate>

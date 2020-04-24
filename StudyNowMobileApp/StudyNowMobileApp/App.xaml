@@ -10,6 +10,12 @@
     <Application.Resources>
         <localized:LocalizedText x:Key="LocalizedText"/>
 
+        <!--#region Картинка с прогрузкой-->
+        <Style TargetType="ActivityIndicator">
+            <Setter Property="Color" Value="#EF6767" />
+        </Style>
+        <!--#endregion-->
+        
         <!--#region Верхний Bar-->
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#EF6767" />

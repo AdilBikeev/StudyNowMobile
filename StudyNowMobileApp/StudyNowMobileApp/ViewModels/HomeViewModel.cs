@@ -74,7 +74,13 @@ namespace StudyNowMobileApp.ViewModels
                             }
                 }
             };
+            this.IsLoading = false;
         }
+
+        /// <summary>
+        /// Указывает нужно ли показывать Иконку с прогрузкой страницы.
+        /// </summary>
+        public bool IsLoading { get; set; } = true;
 
         /// <summary>
         /// Строка вводимоя пользователем в строку поиска.
