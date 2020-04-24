@@ -31,8 +31,6 @@ namespace StudyNowMobileApp.ViewModels
             {
                 if(value != null)
                 {
-                    //Page page = (Page)Activator.CreateInstance(value.typePage);
-                    //Navigation.PushAsync(page);
                     Navigation.PushAsync(value.typePage);
                     this.UpdatePropertyChanged();
                 }

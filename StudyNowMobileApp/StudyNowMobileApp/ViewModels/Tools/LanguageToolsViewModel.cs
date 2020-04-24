@@ -32,8 +32,8 @@ namespace StudyNowMobileApp.ViewModels.Tools
         { 
             get => new List<Language>()
             {
-                new Language(){ DisplayName = LocalizedText.LabelLangRuText, ShortName = "ru-RU", ImageSource = "Russian.png" },
-                new Language(){ DisplayName = LocalizedText.LabelLangEnText, ShortName = "en-GB", ImageSource = "English.png" }
+                new Language(){ DisplayName = LocalizedText.LabelLangRuText, ShortName = "ru-RU", ImageSource = "Tools_Lang_Russian.png" },
+                new Language(){ DisplayName = LocalizedText.LabelLangEnText, ShortName = "en-GB", ImageSource = "Tools_Lang_English.png" }
             };
 
             set => new NotImplementedException();

@@ -12,12 +12,12 @@
              NavigationPage.HasNavigationBar="False">
     <TabbedPage.Children>
         <views:Home BackgroundColor="Bisque"
-                IconImageSource="Images/NavigationBar/Nav_Home.png"></views:Home>
+                IconImageSource="Nav_Home.png"></views:Home>
         <views:Workout BackgroundColor="Red"
-                           IconImageSource="Images/NavigationBar/Nav_Workout.png"></views:Workout>
+                           IconImageSource="Nav_Workout.png"></views:Workout>
         <views:News BackgroundColor="Blue"
-                        IconImageSource="Images/NavigationBar/Nav_News.png"></views:News>
+                        IconImageSource="Nav_News.png"></views:News>
         <views:Stats BackgroundColor="Yellow"
-                        IconImageSource="Images/NavigationBar/Nav_Stats.png"></views:Stats>
+                        IconImageSource="Nav_Stats.png"></views:Stats>
     </TabbedPage.Children>
 </TabbedPage>

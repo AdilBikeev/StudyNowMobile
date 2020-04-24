@@ -134,24 +134,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <BundleResource Include="Resources\Images\NavigationBar\Nav_Workout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\NavigationBar\Nav_Home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\NavigationBar\Nav_News.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\NavigationBar\Nav_Stats.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\TopBar\TopBar_Profile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\Banner\Banner_Banner.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Banner_Banner.png" />
   </ItemGroup>
   <ItemGroup>
@@ -173,27 +155,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Images\Home\TopBar_Profile.png">
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Images\TopBar\TopBar_Tools.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\TopBar_Tools.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images\Tools\Language\English.png" />
+    <BundleResource Include="Resources\Tools_Lang_English.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Images\Tools\Language\Russian.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\English.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Russian.png" />
+    <BundleResource Include="Resources\Tools_Lang_Russian.png" />
   </ItemGroup>
 </Project>
