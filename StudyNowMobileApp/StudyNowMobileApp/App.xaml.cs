@@ -1,4 +1,6 @@
-﻿using StudyNowMobileApp.Views;
+﻿using StudyNowMobileApp.Hellpers;
+using StudyNowMobileApp.Models.Tools;
+using StudyNowMobileApp.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,6 +11,7 @@ namespace StudyNowMobileApp
     {
         public App()
         {
+            InitBaseSettings();
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
@@ -24,6 +27,19 @@ namespace StudyNowMobileApp
 
         protected override void OnResume()
         {
+        }
+
+        /// <summary>
+        /// Инициализация настроек приложения, необохдимых до его запуска.
+        /// </summary>
+        private void InitBaseSettings()
+        {
+            string lang = Settings.GetSettings(nameof(lang));
+
+            if (!string.IsNullOrEmpty(lang))
+            {
+                LocalizationHellper.SetLocalizationOrDefault(lang);
+            }
         }
     }
 }

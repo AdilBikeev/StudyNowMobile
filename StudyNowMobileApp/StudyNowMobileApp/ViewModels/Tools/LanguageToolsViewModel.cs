@@ -29,12 +29,8 @@ namespace StudyNowMobileApp.ViewModels.Tools
         /// Список доступных языков для локализации приложения.
         /// </summary>
         public List<Language> Languages 
-        { 
-            get => new List<Language>()
-            {
-                new Language(){ DisplayName = LocalizedText.LabelLangRuText, ShortName = "ru-RU", ImageSource = "Tools_Lang_Russian.png" },
-                new Language(){ DisplayName = LocalizedText.LabelLangEnText, ShortName = "en-GB", ImageSource = "Tools_Lang_English.png" }
-            };
+        {
+            get => LocalizationHellper.Languages;
 
             set => new NotImplementedException();
         }
@@ -46,10 +42,8 @@ namespace StudyNowMobileApp.ViewModels.Tools
         {
             if(lang != null)
             {
-                CultureInfo.CurrentCulture = new CultureInfo(lang.ShortName);
-                CultureInfo.CurrentUICulture = CultureInfo.CurrentCulture;
-
-                LocalizedText.Culture = CultureInfo.CurrentCulture;
+                LocalizationHellper.SetLocalization(lang);
+                Settings.AddSettings(nameof(lang), lang.ShortName);
                 this.UpdatePropertyChanged();
             }
         }
