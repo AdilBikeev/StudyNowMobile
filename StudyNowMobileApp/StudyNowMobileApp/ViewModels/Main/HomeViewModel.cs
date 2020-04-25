@@ -11,7 +11,7 @@ using Xamarin.Forms;
 using StudyNowMobileApp.Views.ToolsMenu;
 using StudyNowMobileApp.Localization;
 
-namespace StudyNowMobileApp.ViewModels
+namespace StudyNowMobileApp.ViewModels.Main
 {
     public class HomeViewModel: BaseViewModel
     {

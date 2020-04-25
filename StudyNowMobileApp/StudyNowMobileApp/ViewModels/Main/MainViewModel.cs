@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace StudyNowMobileApp.ViewModels
+namespace StudyNowMobileApp.ViewModels.Main
 {
     /// <summary>
     /// Главная страница приложения.

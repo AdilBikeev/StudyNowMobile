@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace StudyNowMobileApp.ViewModels
+namespace StudyNowMobileApp.ViewModels.Tools
 {
     public class ToolsViewModel: BaseViewModel
     {
