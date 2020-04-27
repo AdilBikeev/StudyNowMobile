@@ -1,27 +1,26 @@
-﻿using StudyNowMobileApp.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-
-namespace StudyNowMobileApp.Views.BaseView
+﻿namespace StudyNowMobileApp.Views.BaseView
 {
+    using StudyNowMobileApp.ViewModels;
+    using Xamarin.Forms;
+
     /// <summary>
     /// Базове представление страницы.
     /// </summary>
-    public abstract class BaseContentPage: ContentPage 
+    public abstract class BaseContentPage : ContentPage
     {
         /// <summary>
-        /// ViewModel, с которой был произведен переход на заданное представление.
+        /// Gets or sets viewModel, с которой был произведен переход на заданное представление.
         /// </summary>
-        protected BaseViewModel vm;
+        protected BaseViewModel Vm { get; set; }
 
+        /// <inheritdoc/>
         protected override void OnDisappearing()
         {
-            if(vm != null)
+            if (this.Vm != null)
             {
-                this.vm.UpdatePropertyChanged();
+                this.Vm.UpdatePropertyChanged();
             }
+
             base.OnDisappearing();
         }
     }

@@ -1,46 +1,43 @@
-﻿using StudyNowMobileApp.Hellpers;
-using StudyNowMobileApp.Localization;
-using StudyNowMobileApp.Models.Tools;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-
-namespace StudyNowMobileApp.ViewModels.Tools
+﻿namespace StudyNowMobileApp.ViewModels.Tools
 {
-    public class LanguageToolsViewModel: BaseViewModel
+    using System;
+    using System.Collections.Generic;
+    using StudyNowMobileApp.Hellpers;
+    using StudyNowMobileApp.Localization;
+    using StudyNowMobileApp.Models.Tools;
+
+    /// <summary>
+    /// Служит прослойкой для LanguageTools.xaml.
+    /// </summary>
+    public class LanguageToolsViewModel : BaseViewModel
     {
-        //public ICommand ChooseLangCommand { get; private set; }
-        public Language ChooseLangCommand 
-        { 
+        /// <summary>
+        /// Gets or sets дейсвтие при выборе языка.
+        /// </summary>
+        public Language ChooseLangCommand
+        {
             get => null;
             set => this.ChangeText(value);
         }
 
-        protected override List<string> PropertyNames => new List<string>()
-        {
-            nameof(TitlePage),
-            nameof(Languages)
-        };
-
         /// <summary>
-        /// Список доступных языков для локализации приложения.
+        /// Gets список доступных языков для локализации приложения.
         /// </summary>
-        public List<Language> Languages 
-        {
-            get => LocalizationHellper.Languages;
-
-            set => new NotImplementedException();
-        }
+        public List<Language> Languages => LocalizationHellper.Languages;
 
         /// <inheritdoc/>
         public override string TitlePage => LocalizedText.ToolsLanguageTitle;
 
+        /// <inheritdoc/>
+        protected override List<string> PropertyNames => new List<string>()
+        {
+            nameof(this.TitlePage),
+            nameof(this.Languages),
+        };
+
         private void ChangeText(Language lang)
         {
-            if(lang != null)
+            if (lang != null)
             {
                 LocalizationHellper.SetLocalization(lang);
                 SettingsHellper.AddSettings(nameof(lang), lang.ShortName);

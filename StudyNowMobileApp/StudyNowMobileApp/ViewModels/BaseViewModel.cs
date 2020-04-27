@@ -19,7 +19,7 @@
         public abstract string TitlePage { get; }
 
         /// <summary>
-        /// Gets or sets список имен свойств ViewModel.
+        /// Gets список имен свойств ViewModel.
         /// </summary>
 #pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
         protected abstract List<string> PropertyNames { get; }

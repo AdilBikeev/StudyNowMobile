@@ -1,17 +1,16 @@
-﻿using StudyNowMobileApp.Localization;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StudyNowMobileApp.ViewModels.Main
+﻿namespace StudyNowMobileApp.ViewModels.Main
 {
+    using System;
+    using System.Collections.Generic;
+    using StudyNowMobileApp.Localization;
+
     /// <summary>
     /// Главная страница приложения.
     /// </summary>
     public class MainViewModel : BaseViewModel
     {
         /// <summary>
-        /// Описание кнопки "Домой" на навигационной панели.
+        /// Gets or sets описание кнопки "Домой" на навигационной панели.
         /// </summary>
         public string HomeTitle
         {
@@ -20,7 +19,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         }
 
         /// <summary>
-        /// Описание кнопки "Тренироваться" на навигационной панели.
+        /// Gets or sets описание кнопки "Тренироваться" на навигационной панели.
         /// </summary>
         public string WorkoutTitle
         {
@@ -29,7 +28,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         }
 
         /// <summary>
-        /// Описание кнопки "Тренироваться" на навигационной панели.
+        /// Gets or sets описание кнопки "Тренироваться" на навигационной панели.
         /// </summary>
         public string NewsTitle
         {
@@ -38,7 +37,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         }
 
         /// <summary>
-        /// Описание кнопки "Статистика" на навигационной панели.
+        /// Gets or sets описание кнопки "Статистика" на навигационной панели.
         /// </summary>
         public string StatsTitle
         {
@@ -46,14 +45,16 @@ namespace StudyNowMobileApp.ViewModels.Main
             set => throw new NotImplementedException();
         }
 
-        public override string TitlePage => throw new NotImplementedException();
+        /// <inheritdoc/>
+        public override string TitlePage => LocalizedText.HomeIconTitle;
 
-        protected override List<string> PropertyNames  => new List<string>()
+        /// <inheritdoc/>
+        protected override List<string> PropertyNames => new List<string>()
         {
-            nameof(HomeTitle),
-            nameof(WorkoutTitle),
-            nameof(NewsTitle),
-            nameof(StatsTitle)
+            nameof(this.HomeTitle),
+            nameof(this.WorkoutTitle),
+            nameof(this.NewsTitle),
+            nameof(this.StatsTitle),
         };
     }
 }

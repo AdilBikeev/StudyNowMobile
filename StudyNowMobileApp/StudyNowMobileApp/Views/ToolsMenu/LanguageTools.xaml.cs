@@ -19,7 +19,7 @@ namespace StudyNowMobileApp.Views.ToolsMenu
         {
             InitializeComponent();
             BindingContext = new LanguageToolsViewModel() { Navigation = this.Navigation };
-            this.vm = viewModel;
+            this.Vm = viewModel;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace StudyNowMobileApp.Views.Main
         public Home()
         {
             InitializeComponent();
-            this.vm = new HomeViewModel() { Navigation = this.Navigation };
-            BindingContext = this.vm;
+            this.Vm = new HomeViewModel() { Navigation = this.Navigation };
+            BindingContext = this.Vm;
         }
     }
 }

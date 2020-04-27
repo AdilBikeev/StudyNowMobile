@@ -10,7 +10,7 @@ namespace StudyNowMobileApp.Views.ToolsMenu
     {
         public ToolsPage(BaseViewModel viewModel)
         {
-            this.vm = viewModel;
+            this.Vm = viewModel;
             InitializeComponent();
             BindingContext = new ToolsViewModel() { Navigation = this.Navigation };
         }
