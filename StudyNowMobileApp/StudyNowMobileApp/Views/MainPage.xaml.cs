@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using StudyNowMobileApp.ViewModels;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-using Xamarin.Forms.PlatformConfiguration;
-using StudyNowMobileApp.Views.BaseView;
-
-namespace StudyNowMobileApp.Views
+﻿namespace StudyNowMobileApp.Views
 {
+    using System.ComponentModel;
+    using StudyNowMobileApp.ViewModels;
+
+    /// <summary>
+    /// Главная страница.
+    /// </summary>
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
@@ -27,15 +21,17 @@ namespace StudyNowMobileApp.Views
             this.InitializeComponent();
         }
 
+        /// <inheritdoc/>
         protected override void OnDisappearing()
         {
             foreach (var item in this.Children)
             {
-                if(item.BindingContext != null && item.BindingContext is BaseViewModel)
+                if (item.BindingContext != null && item.BindingContext is BaseViewModel)
                 {
                     (item.BindingContext as BaseViewModel).UpdatePropertyChanged();
                 }
             }
+
             base.OnDisappearing();
         }
     }

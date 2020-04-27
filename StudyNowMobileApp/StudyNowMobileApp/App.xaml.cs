@@ -7,13 +7,15 @@
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
-#pragma warning disable SA1601 // Partial elements should be documented
+    /// <summary>
+    /// MainClass.
+    /// </summary>
     public partial class App : Application
-#pragma warning restore SA1601 // Partial elements should be documented
     {
-#pragma warning disable SA1600 // Elements should be documented
+        /// <summary>
+        /// Initializes a new instance of the <see cref="App"/> class.
+        /// </summary>
         public App()
-#pragma warning restore SA1600 // Elements should be documented
         {
             this.InitBaseSettings();
             this.InitializeComponent();
