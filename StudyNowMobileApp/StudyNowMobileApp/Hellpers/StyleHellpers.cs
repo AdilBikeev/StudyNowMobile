@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-
-namespace StudyNowMobileApp.Hellpers
+﻿namespace StudyNowMobileApp.Hellpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using Xamarin.Forms;
+
     /// <summary>
     /// Класс-помощник по заданию стилей.
     /// </summary>

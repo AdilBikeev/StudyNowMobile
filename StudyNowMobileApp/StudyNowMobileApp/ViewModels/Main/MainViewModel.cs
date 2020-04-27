@@ -46,7 +46,7 @@ namespace StudyNowMobileApp.ViewModels.Main
             set => throw new NotImplementedException();
         }
         public override string TitlePage { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        protected override List<string> propertyNames 
+        protected override List<string> PropertyNames 
         {
             get => new List<string>()
             {

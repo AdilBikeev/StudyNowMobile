@@ -1,31 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Text;
-using Xamarin.Forms;
-
-namespace StudyNowMobileApp.ViewModels
+﻿namespace StudyNowMobileApp.ViewModels
 {
-    public abstract class BaseViewModel: INotifyPropertyChanged
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+    using System.Text;
+    using Xamarin.Forms;
+
+    /// <summary>
+    /// Базовое представление ViewModel.
+    /// </summary>
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         /// <summary>
-        /// Название страницы для отображения.
+        /// Gets or sets список имен свойств ViewModel.
         /// </summary>
-        public abstract string TitlePage { get; set; }
+#pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
+        protected abstract List<string> PropertyNames { get; set; }
+#pragma warning restore CA2227 // Свойства коллекций должны быть доступны только для чтения
 
         /// <summary>
-        /// Список имен свойств ViewModel.
+        /// Gets or sets свойство поьзволяющие производить переход между представлениями.
         /// </summary>
-        protected abstract List<string> propertyNames { get; set; }
-
+#pragma warning disable SA1202 // Elements should be ordered by access
         public INavigation Navigation { get; set; }
-        public event PropertyChangedEventHandler PropertyChanged;
+#pragma warning restore SA1202 // Elements should be ordered by access
 
         protected virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        /// <inheritdoc/>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Получает или задает название страницы для отображения.
+        /// </summary>
+        public abstract string TitlePage { get; set; }
 
         /// <summary>
         /// Обновляет значения всех свойств на ViewModel.
@@ -33,7 +45,7 @@ namespace StudyNowMobileApp.ViewModels
         /// <param name="propertyNames">Список имен свойств ViewModel.</param>
         public void UpdatePropertyChanged()
         {
-            foreach (var name in this.propertyNames)
+            foreach (var name in this.PropertyNames)
             {
                 this.NotifyPropertyChanged(name);
             }

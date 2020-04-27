@@ -19,13 +19,14 @@ namespace StudyNowMobileApp.Views
     {
         private BaseViewModel vm;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainPage"/> class.
+        /// </summary>
         public MainPage()
         {
-            InitializeComponent();
-            
+            this.InitializeComponent();
         }
 
-        
         protected override void OnDisappearing()
         {
             foreach (var item in this.Children)
@@ -37,6 +38,5 @@ namespace StudyNowMobileApp.Views
             }
             base.OnDisappearing();
         }
-        
     }
 }

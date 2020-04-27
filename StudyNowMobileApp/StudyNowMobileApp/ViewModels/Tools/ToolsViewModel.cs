@@ -37,7 +37,7 @@ namespace StudyNowMobileApp.ViewModels.Tools
             }
         }
 
-        protected override List<string> propertyNames 
+        protected override List<string> PropertyNames 
         {
             get => new List<string>()
             {

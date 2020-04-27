@@ -1,4 +1,8 @@
-﻿namespace StudyNowMobileApp.Models.Home
+﻿// <copyright file="Curs.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace StudyNowMobileApp.Models.Home
 {
     using System;
     using System.Collections.Generic;

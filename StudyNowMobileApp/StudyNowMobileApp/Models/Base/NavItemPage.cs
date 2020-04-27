@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-
-namespace StudyNowMobileApp.Models.Base
+﻿namespace StudyNowMobileApp.Models.Base
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Text;
+
     /// <summary>
     /// Навиг. элементы.
     /// </summary>

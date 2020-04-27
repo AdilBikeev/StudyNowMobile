@@ -13,8 +13,7 @@
     /// </summary>
     public class SubCurs : INotifyPropertyChanged
     {
-        private readonly string basePathSource = "Images/Home";
-
+        /// <inheritdoc/>
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName]string prop = "")

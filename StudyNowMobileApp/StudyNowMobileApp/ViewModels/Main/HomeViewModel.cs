@@ -126,7 +126,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         /// Взвращает или задает логику перехода на страницу с настройками. 
         /// </summary>
         public ICommand NavigateToolsCommand { get; protected set; }
-        protected override List<string> propertyNames 
+        protected override List<string> PropertyNames 
         {
             get => new List<string>()
             {

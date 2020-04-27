@@ -1,26 +1,27 @@
-﻿using StudyNowMobileApp.Localization;
-using StudyNowMobileApp.Models.Tools;
-using StudyNowMobileApp.Views.ToolsMenu;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-
-namespace StudyNowMobileApp.Hellpers
+﻿namespace StudyNowMobileApp.Hellpers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using System.Text;
+    using StudyNowMobileApp.Localization;
+    using StudyNowMobileApp.Models.Tools;
+    using StudyNowMobileApp.Views.ToolsMenu;
+
+    /// <summary>
+    /// Класс-помощник в локализации приложения.
+    /// </summary>
     public static class LocalizationHellper
     {
-        public static List<Language> Languages
+        /// <summary>
+        /// Gets список языков.
+        /// </summary>
+        public static List<Language> Languages => new List<Language>()
         {
-            get => new List<Language>()
-            {
-                new Language(){ DisplayName = LocalizedText.LabelLangRuText, ShortName = "ru-RU", ImageSource = "Tools_Lang_Russian.png" },
-                new Language(){ DisplayName = LocalizedText.LabelLangEnText, ShortName = "en-GB", ImageSource = "Tools_Lang_English.png" }
-            };
-
-            set => new NotImplementedException();
-        }
+            new Language() { DisplayName = LocalizedText.LabelLangRuText, ShortName = "ru-RU", ImageSource = "Tools_Lang_Russian.png" },
+            new Language() { DisplayName = LocalizedText.LabelLangEnText, ShortName = "en-GB", ImageSource = "Tools_Lang_English.png" },
+        };
 
         private static Language DefaultLang => Languages.First();
 
@@ -30,7 +31,7 @@ namespace StudyNowMobileApp.Hellpers
         /// <param name="lang">Язык приложения.</param>
         public static void SetLocalization(Language lang)
         {
-            CultureInfo.CurrentCulture = new CultureInfo(lang.ShortName);
+            CultureInfo.CurrentCulture = new CultureInfo(lang?.ShortName);
             CultureInfo.CurrentUICulture = CultureInfo.CurrentCulture;
             LocalizedText.Culture = CultureInfo.CurrentCulture;
         }
@@ -46,7 +47,7 @@ namespace StudyNowMobileApp.Hellpers
 
             foreach (var item in Languages)
             {
-                if(item.ShortName == lang)
+                if (item.ShortName == lang)
                 {
                     language = item;
                     break;
