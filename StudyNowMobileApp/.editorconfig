@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# SA0001: XML comment analysis disabled
+dotnet_diagnostic.SA0001.severity = none
+
+# CA1824: Пометьте сборки с помощью NeutralResourcesLanguageAttribute
+dotnet_diagnostic.CA1824.severity = none

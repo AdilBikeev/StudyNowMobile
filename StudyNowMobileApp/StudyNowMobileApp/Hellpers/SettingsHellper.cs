@@ -7,8 +7,7 @@
 
 namespace StudyNowMobileApp.Hellpers
 {
-    using Plugin.Settings;
-    using Plugin.Settings.Abstractions;
+    using PluginSetting = Plugin.Settings;
 
     /// <summary>
     /// This is the Settings static class that can be used in your Core solution or in any
@@ -20,7 +19,7 @@ namespace StudyNowMobileApp.Hellpers
         private const string KeySettings = "settings_key";
         private static readonly string SettingsDefault = string.Empty;
 
-        private static ISettings AppSettings => CrossSettings.Current;
+        private static PluginSetting.Abstractions.ISettings AppSettings => PluginSetting.CrossSettings.Current;
 
         /// <summary>
         ///  Gets or sets настройки по умолчанию.
