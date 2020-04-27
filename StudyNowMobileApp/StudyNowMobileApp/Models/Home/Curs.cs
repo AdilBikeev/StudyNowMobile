@@ -14,34 +14,28 @@ namespace StudyNowMobileApp.Models.Home
     /// <summary>
     /// Описывает курс на домашней странице.
     /// </summary>
-    public class Curs : INotifyPropertyChanged
+    public class Curs
     {
         /// <summary>
-        /// Задает имя для кнопки "развернуть" на каждом курсе.
+        /// Gets задает имя для кнопки "развернуть" на каждом курсе.
         /// </summary>
         public string DeployCurs { get; private set; } = "Развернуть";
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-        }
-
         /// <summary>
-        /// Возвращает или задает название курса.
+        /// Gets or sets название курса.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Возвращает или задает описание курса.
+        /// Gets or sets описание курса.
         /// </summary>
         public string Description { get; set; }
 
         /// <summary>
-        /// Возвращает или задает список под-курсов по данному курсу.
+        /// Gets or sets список под-курсов по данному курсу.
         /// </summary>
+#pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
         public IList<SubCurs> SubCurs { get; set; }
+#pragma warning restore CA2227 // Свойства коллекций должны быть доступны только для чтения
     }
 }

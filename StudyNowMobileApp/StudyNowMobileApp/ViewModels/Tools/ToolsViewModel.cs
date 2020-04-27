@@ -19,7 +19,7 @@ namespace StudyNowMobileApp.ViewModels.Tools
         {
             get => new List<Tool>()
             {
-                new Tool() { Name = LocalizedText.ToolsLanguageTitle, typePage = new LanguageTools(this) }
+                new Tool() { Name = LocalizedText.ToolsLanguageTitle, TypePage = new LanguageTools(this) }
             };
             set => throw new NotImplementedException();
         }
@@ -31,22 +31,19 @@ namespace StudyNowMobileApp.ViewModels.Tools
             {
                 if(value != null)
                 {
-                    Navigation.PushAsync(value.typePage);
+                    Navigation.PushAsync(value.TypePage);
                     this.UpdatePropertyChanged();
                 }
             }
         }
 
-        protected override List<string> PropertyNames 
+        protected override List<string> PropertyNames  => new List<string>()
         {
-            get => new List<string>()
-            {
-                nameof(TitlePage),
-                nameof(Tools)
-            };
-            set => throw new NotImplementedException(); 
-        }
-        public override string TitlePage { get => LocalizedText.ToolsPageTitle; set => throw new NotImplementedException(); }
+            nameof(TitlePage),
+            nameof(Tools)
+        };
+
+        public override string TitlePage => LocalizedText.ToolsPageTitle;
 
         public ToolsViewModel() { }
     }

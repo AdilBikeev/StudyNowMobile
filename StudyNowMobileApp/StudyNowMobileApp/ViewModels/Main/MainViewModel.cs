@@ -45,17 +45,15 @@ namespace StudyNowMobileApp.ViewModels.Main
             get => LocalizedText.StatsIconTitle;
             set => throw new NotImplementedException();
         }
-        public override string TitlePage { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        protected override List<string> PropertyNames 
+
+        public override string TitlePage => throw new NotImplementedException();
+
+        protected override List<string> PropertyNames  => new List<string>()
         {
-            get => new List<string>()
-            {
-                nameof(HomeTitle),
-                nameof(WorkoutTitle),
-                nameof(NewsTitle),
-                nameof(StatsTitle)
-            };
-            set => throw new NotImplementedException(); 
-        }
+            nameof(HomeTitle),
+            nameof(WorkoutTitle),
+            nameof(NewsTitle),
+            nameof(StatsTitle)
+        };
     }
 }

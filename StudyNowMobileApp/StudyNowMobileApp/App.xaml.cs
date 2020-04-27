@@ -41,7 +41,7 @@
         /// </summary>
         private void InitBaseSettings()
         {
-            string lang = Settings.GetSettings(nameof(lang));
+            string lang = SettingsHellper.GetSettings(nameof(lang));
 
             if (!string.IsNullOrEmpty(lang))
             {

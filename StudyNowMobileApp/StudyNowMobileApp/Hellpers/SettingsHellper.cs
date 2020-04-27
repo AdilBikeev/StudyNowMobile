@@ -8,7 +8,7 @@
     /// of your client applications. All settings are laid out the same exact way with getters
     /// and setters.
     /// </summary>
-    public static class Settings
+    public static class SettingsHellper
     {
         private const string KeySettings = "settings_key";
         private static readonly string SettingsDefault = string.Empty;

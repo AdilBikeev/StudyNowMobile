@@ -1,58 +1,36 @@
-﻿using StudyNowMobileApp.Models.Home;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-using StudyNowMobileApp.Views.ToolsMenu;
-using StudyNowMobileApp.Localization;
-
-namespace StudyNowMobileApp.ViewModels.Main
+﻿namespace StudyNowMobileApp.ViewModels.Main
 {
-    public class HomeViewModel: BaseViewModel
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+    using System.Linq;
+    using System.Windows.Input;
+    using StudyNowMobileApp.Localization;
+    using StudyNowMobileApp.Models.Home;
+    using StudyNowMobileApp.Views.ToolsMenu;
+    using Xamarin.Forms;
+
+    /// <summary>
+    /// Служит прослойкой для Home.xaml.
+    /// </summary>
+    public class HomeViewModel : BaseViewModel
     {
         private IList<Curs> searcherCurs;
         private string querySearchBar = string.Empty;
 
-        public override string TitlePage
-        {
-            get => LocalizedText.HomeIconTitle;
-            set => new NotImplementedException();
-        }
-
         /// <summary>
-        /// Искомые курсы.
+        /// Initializes a new instance of the <see cref="HomeViewModel"/> class.
         /// </summary>
-        public IList<Curs> SearcherCurs
-        {
-            get
-            {
-                
-                return searcherCurs;
-            }
-            set
-            {
-                searcherCurs = value;
-                NotifyPropertyChanged(nameof(SearcherCurs));
-            }
-        }
-
-        /// <summary>
-        /// Список курсов.
-        /// </summary>
-        public IList<Curs> Curs { get; private set; }
-
         public HomeViewModel()
         {
-            NavigateToolsCommand = new Command(NavigateTools);
-            searcherCurs = Curs = new List<Curs>
+            this.NavigateToolsCommand = new Command(this.NavigateTools);
+            this.searcherCurs = this.Curs = new List<Curs>
             {
-                new Curs(){ Name = "Избранное", Description = "Описание", 
-                            SubCurs = new List<SubCurs>
+#pragma warning disable SA1413 // Use trailing comma in multi-line initializers
+                new Curs()
+                {
+                    Name = "Избранное", Description = "Описание",
+                    SubCurs = new List<SubCurs>
                             {
                                 new SubCurs()
                                 {
@@ -73,72 +51,96 @@ namespace StudyNowMobileApp.ViewModels.Main
                                 }
                             }
                 }
+#pragma warning restore SA1413 // Use trailing comma in multi-line initializers
             };
             this.IsLoading = false;
         }
 
         /// <summary>
-        /// Указывает нужно ли показывать Иконку с прогрузкой страницы.
+        /// Gets строка, отображаемая, когда SearchBar не заполнен.
+        /// </summary>
+        public string PlaceHolderText => LocalizedText.SearchBarPlaceHolder;
+
+        /// <inheritdoc/>
+        public override string TitlePage => LocalizedText.HomeIconTitle;
+
+        /// <summary>
+        /// Gets or sets искомые курсы.
+        /// </summary>
+#pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
+        public IList<Curs> SearcherCurs
+#pragma warning restore CA2227 // Свойства коллекций должны быть доступны только для чтения
+        {
+            get
+            {
+                return this.searcherCurs;
+            }
+
+            set
+            {
+                this.searcherCurs = value;
+                this.NotifyPropertyChanged(nameof(this.SearcherCurs));
+            }
+        }
+
+        /// <summary>
+        /// Gets список курсов.
+        /// </summary>
+        public IList<Curs> Curs { get; private set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether нужно ли показывать Иконку с прогрузкой страницы.
         /// </summary>
         public bool IsLoading { get; set; } = true;
 
         /// <summary>
-        /// Строка вводимоя пользователем в строку поиска.
+        /// Gets or sets строка вводимоя пользователем в строку поиска.
         /// </summary>
         public string QuerySearchBar
         {
             get
             {
-                return querySearchBar;
+                return this.querySearchBar;
             }
+
             set
             {
-                querySearchBar = value;
-                PerformSearch.Execute(querySearchBar);
-                NotifyPropertyChanged(nameof(QuerySearchBar));
+                this.querySearchBar = value;
+                this.PerformSearch.Execute(this.querySearchBar);
+                this.NotifyPropertyChanged(nameof(this.QuerySearchBar));
             }
         }
 
         /// <summary>
-        /// Строка, отображаемая, когда SearchBar не заполнен.
-        /// </summary>
-        public string PlaceHolderText
-        {
-            get => LocalizedText.SearchBarPlaceHolder;
-            set => new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Фильрует список курсов по названию, кторый интересует пользователя.
+        /// Gets отфильтрованный список курсов по названию, кторый интересует пользователя.
         /// </summary>
         public ICommand PerformSearch => new Command<string>((string query) =>
         {
             if (!string.IsNullOrEmpty(query))
             {
-                SearcherCurs = Curs.Where(x => x.Name.ToLower().IndexOf(query.ToLower()) != -1).ToList();
-            }else
+                this.SearcherCurs = this.Curs.Where(x => x.Name.ToLower(CultureInfo.CurrentCulture).IndexOf(query.ToLower(CultureInfo.CurrentCulture), StringComparison.CurrentCulture) != -1).ToList();
+            }
+            else
             {
-                SearcherCurs = Curs;
+                this.SearcherCurs = this.Curs;
             }
         });
 
         /// <summary>
-        /// Взвращает или задает логику перехода на страницу с настройками. 
+        /// Gets or sets логику перехода на страницу с настройками.
         /// </summary>
         public ICommand NavigateToolsCommand { get; protected set; }
-        protected override List<string> PropertyNames 
+
+        /// <inheritdoc/>
+        protected override List<string> PropertyNames => new List<string>()
         {
-            get => new List<string>()
-            {
-                nameof(PlaceHolderText),
-                nameof(TitlePage)
-            };
-            set => throw new NotImplementedException(); 
-        }
+            nameof(this.PlaceHolderText),
+            nameof(this.TitlePage),
+        };
 
         private void NavigateTools()
         {
-            Navigation.PushAsync(new ToolsPage(this));
+            this.Navigation.PushAsync(new ToolsPage(this));
         }
     }
 }

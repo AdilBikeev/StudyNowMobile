@@ -19,7 +19,7 @@ namespace StudyNowMobileApp.ViewModels.Tools
             set => this.ChangeText(value);
         }
 
-        protected override List<string> PropertyNames { get; set; } = new List<string>()
+        protected override List<string> PropertyNames => new List<string>()
         {
             nameof(TitlePage),
             nameof(Languages)
@@ -36,14 +36,14 @@ namespace StudyNowMobileApp.ViewModels.Tools
         }
 
         /// <inheritdoc/>
-        public override string TitlePage { get => LocalizedText.ToolsLanguageTitle; set => new NotImplementedException(); }
+        public override string TitlePage => LocalizedText.ToolsLanguageTitle;
 
         private void ChangeText(Language lang)
         {
             if(lang != null)
             {
                 LocalizationHellper.SetLocalization(lang);
-                Settings.AddSettings(nameof(lang), lang.ShortName);
+                SettingsHellper.AddSettings(nameof(lang), lang.ShortName);
                 this.UpdatePropertyChanged();
             }
         }
