@@ -2,9 +2,6 @@ name: CI on Push and Pull Request
 
 on: 
   push:
-    branches:
-      - master   # Push events on master branch
-      - develop  # Push events on develop branch
     tags:
     - '*'
 
@@ -38,10 +35,10 @@ jobs:
       
     - name: Android
       run: |
-        cd StudyNowMobile
+        cd StudyNowMobileApp
         nuget restore
-        cd StudyNowMobile.Android
-        msbuild StudyNowMobile.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
+        cd StudyNowMobileApp.Android
+        msbuild StudyNowMobileApp.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
   iOS:
 
     runs-on: macos-latest
@@ -52,6 +49,6 @@ jobs:
       
     - name: iOS
       run: |
-        cd StudyNowMobile
+        cd StudyNowMobileApp
         nuget restore
-        msbuild StudyNowMobile.iOS/StudyNowMobile.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+        msbuild StudyNowMobileApp.iOS/StudyNowMobileApp.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
