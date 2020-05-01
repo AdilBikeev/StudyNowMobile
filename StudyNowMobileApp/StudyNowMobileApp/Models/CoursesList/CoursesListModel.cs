@@ -18,7 +18,7 @@
         /// <summary>
         /// Gets or sets имя курса.
         /// </summary>
-        public string Displayname { get; set; }
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// Gets or sets страница с настройкой.

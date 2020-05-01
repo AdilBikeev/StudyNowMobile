@@ -24,7 +24,7 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// </summary>
         public List<CoursesListModel> Courses => new List<CoursesListModel>()
         {
-            new CoursesListModel() { Displayname = LocalizedText.CoursesListMathDisplayName, TypePage = new LanguageTools(this), ImageSource = "CoursesList_Math.png" },
+            new CoursesListModel() { DisplayName = LocalizedText.CoursesListMathDisplayName, TypePage = new LanguageTools(this), ImageSource = "CoursesList_Math.png" },
         };
 
         /// <summary>

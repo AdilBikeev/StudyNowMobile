@@ -5,10 +5,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StudyNowMobileApp.Views.Course.CoursesListPage">
+             x:Class="StudyNowMobileApp.Views.Course.CoursesListPage"
+                           Title="{Binding TitlePage}">
 
     <baseview:BaseContentPage.Resources>
-        <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../../Resource/General/List/ListDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../../Resource/CoursesListPage/CoursesListDictianary.xaml"></ResourceDictionary>
     </baseview:BaseContentPage.Resources>
 
     <baseview:BaseContentPage.Content>
@@ -19,8 +21,11 @@
                 <DataTemplate>
                     <ViewCell>
                         <Frame>
-                            <Label Text="{Binding DisplayName}"
-                                   FontSize="15"/>
+                            <StackLayout Style="{StaticResource LangItem}">
+                                <Image Source="{Binding ImageSource}"></Image>
+                                <Label
+                            Text="{Binding DisplayName}"></Label>
+                            </StackLayout>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>

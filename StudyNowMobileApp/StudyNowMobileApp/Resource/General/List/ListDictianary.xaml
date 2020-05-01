@@ -5,6 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d">
 
+    <!--#region Предсталвение списка различных элементов с закругленными углами-->
+    
     <Style TargetType="StackLayout">
         <Setter Property="Margin" Value="10" />
     </Style>
@@ -27,4 +29,7 @@
         <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
         <Setter Property="VerticalOptions" Value="CenterAndExpand" />
     </Style>
+
+    <!--#endregion-->
+    
 </ResourceDictionary>   

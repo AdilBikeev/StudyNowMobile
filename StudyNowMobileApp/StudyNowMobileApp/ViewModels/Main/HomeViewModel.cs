@@ -14,6 +14,7 @@ namespace StudyNowMobileApp.ViewModels.Main
     using System.Windows.Input;
     using StudyNowMobileApp.Localization;
     using StudyNowMobileApp.Models.Home;
+    using StudyNowMobileApp.Views.Course;
     using StudyNowMobileApp.Views.ToolsMenu;
     using Xamarin.Forms;
 
@@ -36,27 +37,15 @@ namespace StudyNowMobileApp.ViewModels.Main
 #pragma warning disable SA1413 // Use trailing comma in multi-line initializers
                 new Curs()
                 {
-                    Name = "Избранное", Description = "Описание",
+                    Name = "ОГЭ", Description = "Подготовка к ОГЭ",
                     SubCurs = new List<SubCurs>
-                            {
-                                new SubCurs()
-                                {
-                                    Name = "С#",
-                                    SourceIcon = "TopBar_Profile.png"
-                                },
-
-                                new SubCurs()
-                                {
-                                    Name = "С++",
-                                    SourceIcon = "TopBar_Profile.png"
-                                },
-
-                                new SubCurs()
-                                {
-                                    Name = "С",
-                                    SourceIcon = "TopBar_Profile.png"
-                                }
-                            }
+                    {
+                        new SubCurs()
+                        {
+                            Name = "Математика",
+                            SourceIcon = "TopBar_Profile.png"
+                        }
+                    }
                 }
 #pragma warning restore SA1413 // Use trailing comma in multi-line initializers
             };
