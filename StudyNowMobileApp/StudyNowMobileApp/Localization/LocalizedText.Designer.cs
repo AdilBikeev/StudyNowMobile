@@ -61,6 +61,24 @@ namespace StudyNowMobileApp.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Математика.
+        /// </summary>
+        public static string CoursesListMathDisplayName {
+            get {
+                return ResourceManager.GetString("CoursesListMathDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Выберите курс.
+        /// </summary>
+        public static string CoursesListPageTitle {
+            get {
+                return ResourceManager.GetString("CoursesListPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Домой.
         /// </summary>
         public static string HomeIconTitle {

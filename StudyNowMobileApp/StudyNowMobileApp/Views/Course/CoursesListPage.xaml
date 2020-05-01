@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<baseview:BaseContentPage  xmlns:baseview="clr-namespace:StudyNowMobileApp.Views.BaseView"
+                           xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="StudyNowMobileApp.Views.Course.CoursesListPage">
+
+    <baseview:BaseContentPage.Resources>
+        <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
+    </baseview:BaseContentPage.Resources>
+
+    <baseview:BaseContentPage.Content>
+        <ListView ItemsSource="{Binding Courses}"
+                  SelectedItem="{Binding SelectedToolCommand}"
+                  RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                            <Label Text="{Binding DisplayName}"
+                                   FontSize="15"/>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </baseview:BaseContentPage.Content>
+</baseview:BaseContentPage>
