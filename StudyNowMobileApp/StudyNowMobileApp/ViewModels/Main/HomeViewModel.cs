@@ -43,7 +43,7 @@ namespace StudyNowMobileApp.ViewModels.Main
                         new SubCurs()
                         {
                             Name = "Математика",
-                            SourceIcon = "TopBar_Profile.png"
+                            SourceIcon = "CoursesList_Math.png"
                         }
                     }
                 }

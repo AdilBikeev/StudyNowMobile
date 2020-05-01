@@ -166,4 +166,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\CoursesList_Math.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home_DeployList.png" />
+  </ItemGroup>
 </Project>

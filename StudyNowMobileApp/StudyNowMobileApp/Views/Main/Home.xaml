@@ -57,8 +57,7 @@
                                     <FlexLayout Style="{StaticResource CursFlex}">
                                         <Label Style="{StaticResource CursNameLabel}" 
                                                Text="{Binding Name}"></Label>
-                                        <Label Style="{StaticResource CursDescLabel}" 
-                                               Text="{Binding DeployCurs}"></Label>
+                                        <ImageButton Style="{StaticResource CursDeployImgBtn}"></ImageButton>
                                     </FlexLayout>
                                     <Label Style="{StaticResource CursDescLabel}"
                                            Text="{Binding Description}"></Label>
@@ -75,12 +74,12 @@
                                         <CollectionView.ItemTemplate>
                                             <DataTemplate>
                                                 <Frame Padding="0">
-                                                    <FlexLayout Style="{StaticResource CursItemStack}">
+                                                    <StackLayout Style="{StaticResource CursItemFlex}">
                                                         <image:CircleImage Style="{StaticResource CursItemImage}"
                                                                        Source="{Binding SourceIcon}"></image:CircleImage>
                                                         <Label Style="{StaticResource CursItemName}"
                                                            Text="{Binding Name}"></Label>
-                                                    </FlexLayout>
+                                                    </StackLayout>
                                                 </Frame>
                                             </DataTemplate>
                                         </CollectionView.ItemTemplate>
