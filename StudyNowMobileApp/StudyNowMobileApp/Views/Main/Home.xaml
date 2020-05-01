@@ -46,6 +46,7 @@
                                IsVisible="{Binding IsLoading, Mode=TwoWay}"
                                VerticalOptions="CenterAndExpand"
                                HorizontalOptions="CenterAndExpand"/>
+            <!--#region Список тематик курсов-->
             <ListView Style="{StaticResource CursItemList}"
                       ItemsSource="{Binding SearcherCurs}">
                 <ListView.ItemTemplate>
@@ -61,6 +62,7 @@
                                     </FlexLayout>
                                     <Label Style="{StaticResource CursDescLabel}"
                                            Text="{Binding Description}"></Label>
+                                    <!--#region Список курсов по заданной тематике-->
                                     <CollectionView  ItemsSource="{Binding SubCurs}"
                                                      Style="{StaticResource  SubCursCollView}">
                                         <CollectionView.ItemsLayout>
@@ -72,21 +74,25 @@
                                         </CollectionView.ItemsLayout>
                                         <CollectionView.ItemTemplate>
                                             <DataTemplate>
-                                                <FlexLayout Style="{StaticResource CursItemStack}">
-                                                    <image:CircleImage Style="{StaticResource CursItemImage}"
-                                                                       Source="{Binding SourceIcon}"/>
-                                                    <Label Style="{StaticResource CursItemName}"
+                                                <Frame Padding="0">
+                                                    <FlexLayout Style="{StaticResource CursItemStack}">
+                                                        <image:CircleImage Style="{StaticResource CursItemImage}"
+                                                                       Source="{Binding SourceIcon}"></image:CircleImage>
+                                                        <Label Style="{StaticResource CursItemName}"
                                                            Text="{Binding Name}"></Label>
-                                                </FlexLayout>
+                                                    </FlexLayout>
+                                                </Frame>
                                             </DataTemplate>
                                         </CollectionView.ItemTemplate>
                                     </CollectionView>
+                                    <!--#endregion-->
                                 </StackLayout>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <!--#endregion-->
             <!--#endregion-->
         </StackLayout>
     </baseview:BaseContentPage.Content>
