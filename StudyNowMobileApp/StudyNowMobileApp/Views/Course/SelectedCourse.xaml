@@ -32,9 +32,10 @@
                 <!--#region ToolBar-->
                 <FlexLayout     Style="{StaticResource FlexTopBar}">
                     <ImageButton Style="{StaticResource BackTopBar}"
-                            Command="{Binding NavigateToolsCommand}"/>
+                            Command="{Binding NavigateBack}"/>
 
-                    <ImageButton Style="{StaticResource HomeTopBar}"/>
+                    <ImageButton Style="{StaticResource HomeTopBar}"
+                                 Command="{Binding NavigateHome}"/>
                 </FlexLayout>
                 <!--#endregion-->
             </AbsoluteLayout>

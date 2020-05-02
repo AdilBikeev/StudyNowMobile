@@ -13,9 +13,12 @@
 //------------------------------------------------------------------------------
 namespace StudyNowMobileApp.ViewModels
 {
+    using StudyNowMobileApp.Views.Main;
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
+    using System.Windows.Input;
     using Xamarin.Forms;
 
     /// <summary>
@@ -44,6 +47,19 @@ namespace StudyNowMobileApp.ViewModels
 #pragma warning disable SA1202 // Elements should be ordered by access
         public INavigation Navigation { get; set; }
 #pragma warning restore SA1202 // Elements should be ordered by access
+
+        /// <summary>
+        /// Производит переход на предыдущую страницу.
+        /// </summary>
+        public ICommand NavigateBack => new Command(() =>
+        {
+            this.Navigation.PopAsync();
+        });
+
+        /// <summary>
+        /// Производит переход на домашнюю страницу.
+        /// </summary>
+        public ICommand NavigateHome => new Command(() => { this.Navigation.PopToRootAsync(); });
 
         /// <summary>
         /// Обновляет значения всех свойств на ViewModel.

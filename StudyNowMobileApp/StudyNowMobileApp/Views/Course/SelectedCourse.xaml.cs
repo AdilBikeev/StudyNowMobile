@@ -25,7 +25,7 @@
         public SelectedCours(CoursesListModel selectedCourse)
         {
             this.InitializeComponent();
-            this.BindingContext = new SelectedCourseViewModel(selectedCourse);
+            this.BindingContext = new SelectedCourseViewModel(selectedCourse) { Navigation = this.Navigation };
         }
     }
 }
