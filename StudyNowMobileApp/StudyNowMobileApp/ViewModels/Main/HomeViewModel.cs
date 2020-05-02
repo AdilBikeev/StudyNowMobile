@@ -51,7 +51,8 @@ namespace StudyNowMobileApp.ViewModels.Main
                         new CoursesListModel()
                         {
                             DisplayName = "Математика",
-                            ImageSource = "CoursesList_Math.png",
+                            IconImage = "CoursesList_Math.png",
+                            BacgroundCoursImage = "SelectedCours_BgImg.png"
                         }
                     }
                 }

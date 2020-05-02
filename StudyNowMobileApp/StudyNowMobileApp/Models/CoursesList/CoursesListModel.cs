@@ -24,9 +24,14 @@ namespace StudyNowMobileApp.Models.CoursesList
     public class CoursesListModel
     {
         /// <summary>
-        /// Gets or sets имя картинки.
+        /// Gets or sets имя картинки устанавливаемая в качестве иконки.
         /// </summary>
-        public string ImageSource { get; set; }
+        public string IconImage { get; set; }
+
+        /// <summary>
+        /// Фоновая картинка устанавливаемая на странице курса.
+        /// </summary>
+        public string BacgroundCoursImage { get; set; }
 
         /// <summary>
         /// Gets or sets имя курса.

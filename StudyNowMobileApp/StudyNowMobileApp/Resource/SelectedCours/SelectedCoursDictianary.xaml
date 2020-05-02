@@ -5,4 +5,58 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d">
 
+    <!--#region ToolBar-->
+    <Style x:Key="FlexTopBar" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+
+    <Style x:Key="BackTopBar" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="30" />
+        <Setter Property="Margin" Value="15,15,0,0" />
+        <Setter Property="Source" Value="SelectedCours_BackBtn.png" />
+    </Style>
+
+    <Style x:Key="TitleFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="TitleTopBar" TargetType="Label">
+        <Setter Property="TextColor" Value="#FFF" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FlexLayout.Basis" Value="100%" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="HomeTopBar" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="40" />
+        <Setter Property="Margin" Value="0,10,15,0" />
+        <Setter Property="Source" Value="SelectedCours_HomeBtn.png" />
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Фоновая картинка курса-->
+    <Style x:Key="ImageBgFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="200" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="ImageBg" TargetType="Image">
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="FlexLayout.Basis" Value="100%" />
+    </Style>
+    <!--#endregion-->
+
+
 </ResourceDictionary>   

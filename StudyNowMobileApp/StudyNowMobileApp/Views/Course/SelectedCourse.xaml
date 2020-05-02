@@ -3,14 +3,11 @@
                            xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                           mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Course.SelectedCours"
-                           Title="{Binding TitlePage}">
-
-    <!--<baseview:BaseContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="SelectedCours_HomeBtn.png"></ToolbarItem>
-    </baseview:BaseContentPage.ToolbarItems>-->
+                           Title="{Binding TitlePage}"
+                           NavigationPage.HasNavigationBar="False">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/SelectedCours/SelectedCoursDictianary.xaml"/>
@@ -18,9 +15,29 @@
 
     <baseview:BaseContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <AbsoluteLayout>
+                <!--#region Фоновая картинка курса-->
+                <FlexLayout Style="{StaticResource ImageBgFlex}">
+                    <Image Style="{StaticResource ImageBg}"
+                        Source="{Binding BacgroundCoursImage}"></Image>
+                </FlexLayout>
+                <!--#endregion-->
+
+                <FlexLayout
+                    Style="{StaticResource TitleFlex}">
+                    <Label  Style="{StaticResource TitleTopBar}"
+                        Text="{Binding TitlePage}"/>
+                </FlexLayout>
+
+                <!--#region ToolBar-->
+                <FlexLayout     Style="{StaticResource FlexTopBar}">
+                    <ImageButton Style="{StaticResource BackTopBar}"
+                            Command="{Binding NavigateToolsCommand}"/>
+
+                    <ImageButton Style="{StaticResource HomeTopBar}"/>
+                </FlexLayout>
+                <!--#endregion-->
+            </AbsoluteLayout>
         </StackLayout>
     </baseview:BaseContentPage.Content>
 </baseview:BaseContentPage>

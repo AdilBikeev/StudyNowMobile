@@ -28,7 +28,7 @@
                                     CommandParameter="{Binding Source={x:Reference CoursNameLb}, Path=Text}"/>
                             </Frame.GestureRecognizers>
                             <StackLayout Style="{StaticResource CoursItem}">
-                                <Image Source="{Binding ImageSource}"></Image>
+                                <Image Source="{Binding IconImage}"></Image>
                                 <Label x:Name="CoursNameLb"
                             Text="{Binding DisplayName}"></Label>
                             </StackLayout>

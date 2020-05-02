@@ -81,7 +81,7 @@
                                                 <Frame Padding="0">
                                                     <StackLayout Style="{StaticResource CursItemFlex}">
                                                         <image:CircleImage Style="{StaticResource CursItemImage}"
-                                                                       Source="{Binding ImageSource}"></image:CircleImage>
+                                                                       Source="{Binding IconImage}"></image:CircleImage>
                                                         <Label Style="{StaticResource CursItemName}"
                                                            Text="{Binding DisplayName}"></Label>
                                                     </StackLayout>

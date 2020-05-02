@@ -172,4 +172,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\SelectedCours_HomeBtn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCours_BackBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCours_BgImg.png" />
+  </ItemGroup>
 </Project>

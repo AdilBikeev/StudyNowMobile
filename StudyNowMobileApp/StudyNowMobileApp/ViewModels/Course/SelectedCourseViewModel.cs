@@ -26,6 +26,11 @@
         /// </summary>
         public CoursesListModel SelectedCours { get; private set; }
 
+        /// <summary>
+        /// Gets фоновая картинка курса.
+        /// </summary>
+        public string BacgroundCoursImage { get => this.SelectedCours.BacgroundCoursImage; }
+
         /// <inheritdoc/>
         public override string TitlePage { get => this.SelectedCours.DisplayName; }
 
