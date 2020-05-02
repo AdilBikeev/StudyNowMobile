@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using StudyNowMobileApp.Models.CoursesList;
     using StudyNowMobileApp.ViewModels;
     using StudyNowMobileApp.ViewModels.Course;
     using StudyNowMobileApp.Views.BaseView;
@@ -20,12 +21,11 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="CoursesListPage"/> class.
         /// </summary>
-        /// <param name="viewModel">ViewModel предыдущей страницы.</param>
-        public CoursesListPage(BaseViewModel viewModel)
+        /// <param name="coursesLists">Список курсов для отображения на странице.</param>
+        public CoursesListPage(IList<CoursesListModel> coursesLists)
         {
-            this.Vm = viewModel;
             this.InitializeComponent();
-            this.BindingContext = new CoursesListViewModel() { Navigation = this.Navigation };
+            this.BindingContext = new CoursesListViewModel(coursesLists) { Navigation = this.Navigation };
         }
     }
 }

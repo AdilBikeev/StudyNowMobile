@@ -7,7 +7,9 @@
              xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Main.Home"
-             Title="{Binding TitlePage}">
+             Title="{Binding TitlePage}"
+             x:Name="HomePage">
+    
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/Home/HomeDictianary.xaml"></ResourceDictionary>
     </baseview:BaseContentPage.Resources>
@@ -55,9 +57,12 @@
                             <Frame Style="{StaticResource CursFrame}">
                                 <StackLayout Style="{StaticResource CursStack}">
                                     <FlexLayout Style="{StaticResource CursFlex}">
-                                        <Label Style="{StaticResource CursNameLabel}" 
+                                        <Label x:Name="CoursNameLb"
+                                               Style="{StaticResource CursNameLabel}" 
                                                Text="{Binding Name}"></Label>
-                                        <ImageButton Style="{StaticResource CursDeployImgBtn}"></ImageButton>
+                                        <ImageButton Style="{StaticResource CursDeployImgBtn}"
+                                                     Command="{Binding Source={x:Reference HomePage}, Path=BindingContext.ShowCoursListCommand}"
+                                                     CommandParameter="{Binding Text, Source={x:Reference CoursNameLb}}"></ImageButton>
                                     </FlexLayout>
                                     <Label Style="{StaticResource CursDescLabel}"
                                            Text="{Binding Description}"></Label>

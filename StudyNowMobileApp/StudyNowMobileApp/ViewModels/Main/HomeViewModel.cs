@@ -13,6 +13,7 @@ namespace StudyNowMobileApp.ViewModels.Main
     using System.Linq;
     using System.Windows.Input;
     using StudyNowMobileApp.Localization;
+    using StudyNowMobileApp.Models.CoursesList;
     using StudyNowMobileApp.Models.Home;
     using StudyNowMobileApp.Views.Course;
     using StudyNowMobileApp.Views.ToolsMenu;
@@ -32,24 +33,41 @@ namespace StudyNowMobileApp.ViewModels.Main
         public HomeViewModel()
         {
             this.NavigateToolsCommand = new Command(this.NavigateTools);
+            this.ShowCoursListCommand = new Command<string>(this.ShowCoursList);
             this.searcherCurs = this.Curs = new List<Curs>
             {
 #pragma warning disable SA1413 // Use trailing comma in multi-line initializers
                 new Curs()
                 {
                     Name = "ОГЭ", Description = "Подготовка к ОГЭ",
-                    SubCurs = new List<SubCurs>
+                    SubCurs = new List<CoursesListModel>
                     {
-                        new SubCurs()
+                        new CoursesListModel()
                         {
-                            Name = "Математика",
-                            SourceIcon = "CoursesList_Math.png"
+                            DisplayName = "Математика",
+                            ImageSource = "CoursesList_Math.png",
+                            TypePage = null
                         }
                     }
                 }
 #pragma warning restore SA1413 // Use trailing comma in multi-line initializers
             };
             this.IsLoading = false;
+        }
+
+        /// <summary>
+        /// Команда для вывода списка под-курсов.
+        /// </summary>
+        public ICommand ShowCoursListCommand { get; }
+
+        /// <summary>
+        /// Переходит на страницу для отображения всех под-курсов.
+        /// </summary>
+        /// <param name="coursName">Название курса.</param>
+        private void ShowCoursList(string coursName)
+        {
+            var Cours = this.Curs.First(x => x.Name == coursName);
+            this.Navigation.PushAsync(new CoursesListPage(Cours.SubCurs));
         }
 
         /// <summary>

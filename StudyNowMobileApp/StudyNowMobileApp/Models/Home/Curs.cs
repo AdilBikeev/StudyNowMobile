@@ -4,12 +4,14 @@
 
 namespace StudyNowMobileApp.Models.Home
 {
+    using StudyNowMobileApp.Models.CoursesList;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
     using System.Text;
+    using Xamarin.Forms;
 
     /// <summary>
     /// Описывает курс на домашней странице.
@@ -35,7 +37,7 @@ namespace StudyNowMobileApp.Models.Home
         /// Gets or sets список под-курсов по данному курсу.
         /// </summary>
 #pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
-        public IList<SubCurs> SubCurs { get; set; }
+        public IList<CoursesListModel> SubCurs { get; set; }
 #pragma warning restore CA2227 // Свойства коллекций должны быть доступны только для чтения
     }
 }

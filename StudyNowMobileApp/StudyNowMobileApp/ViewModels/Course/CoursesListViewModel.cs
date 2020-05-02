@@ -20,12 +20,9 @@ namespace StudyNowMobileApp.ViewModels.Course
     public class CoursesListViewModel : BaseViewModel
     {
         /// <summary>
-        /// Gets список курсов.
+        /// Gets or sets список курсов.
         /// </summary>
-        public List<CoursesListModel> Courses => new List<CoursesListModel>()
-        {
-            new CoursesListModel() { DisplayName = LocalizedText.CoursesListMathDisplayName, TypePage = new LanguageTools(this), ImageSource = "CoursesList_Math.png" },
-        };
+        public IList<CoursesListModel> Courses { get; private set; }
 
         /// <summary>
         /// Gets or sets дейсвтия при выборе курса.
@@ -50,9 +47,10 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// Initializes a new instance of the <see cref="CoursesListViewModel"/> class.
         /// </summary>
 #pragma warning disable SA1201 // Elements should appear in the correct order
-        public CoursesListViewModel()
+        public CoursesListViewModel(IList<CoursesListModel> coursesLists)
 #pragma warning restore SA1201 // Elements should appear in the correct order
         {
+            this.Courses = coursesLists;
         }
 
         /// <inheritdoc/>
