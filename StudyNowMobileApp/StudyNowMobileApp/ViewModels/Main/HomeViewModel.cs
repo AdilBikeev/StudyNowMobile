@@ -52,7 +52,6 @@ namespace StudyNowMobileApp.ViewModels.Main
                         {
                             DisplayName = "Математика",
                             ImageSource = "CoursesList_Math.png",
-                            TypePage = null
                         }
                     }
                 }

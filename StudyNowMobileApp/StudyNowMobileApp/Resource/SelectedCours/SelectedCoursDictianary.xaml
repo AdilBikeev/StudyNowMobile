@@ -5,14 +5,4 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d">
 
-    <Style x:Key="CoursItem" TargetType="StackLayout">
-        <Setter Property="Orientation" Value="Horizontal" />
-        <Setter Property="Padding" Value="0" />
-    </Style>
-
-    <Style TargetType="Image">
-        <Setter Property="HeightRequest" Value="40" />
-        <Setter Property="WidthRequest" Value="40" />
-        <Setter Property="Aspect" Value="Fill" />
-    </Style>
 </ResourceDictionary>   

@@ -34,8 +34,8 @@ namespace StudyNowMobileApp.Models.CoursesList
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or sets страница с настройкой.
+        /// Gets or sets страницы с выполнением заданий.
         /// </summary>
-        public ContentPage TypePage { get; set; }
+        public IList<ContentPage> TaskPages { get; set; }
     }
 }

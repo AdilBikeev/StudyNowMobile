@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <None Remove="MainPage.xaml~RF1d45b22b.TMP" />
+    <None Remove="Models\CoursesList\CoursesListModel.cs~RF12b6bea.TMP" />
     <None Remove="Views\Main\Home.xaml.cs~RF104573b6.TMP" />
   </ItemGroup>
 
@@ -53,6 +54,9 @@
     <EmbeddedResource Update="Views\Course\CoursesListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Course\SelectedCourse.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Main\Home.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -75,6 +79,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>LocalizedText.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Course\SelectedCourse.xaml.cs">
+      <DependentUpon>SelectedCourse.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ToolsMenu\LanguageTools.xaml.cs">
       <DependentUpon>LanguageTools.xaml</DependentUpon>
