@@ -11,31 +11,29 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace StudyNowMobileApp.ViewModels.Tools
+namespace StudyNowMobileApp.ViewModels.Course
 {
     using System;
     using System.Collections.Generic;
     using StudyNowMobileApp.Localization;
+    using StudyNowMobileApp.Models.CoursesList;
     using StudyNowMobileApp.Models.Tools;
     using StudyNowMobileApp.Views.ToolsMenu;
 
     /// <summary>
-    /// Служит прослойкой для Tools.xaml.
+    /// Служит прослойкой для CoursesListPage.xaml.
     /// </summary>
-    public class ToolsViewModel : BaseViewModel
+    public class CoursesListViewModel : BaseViewModel
     {
         /// <summary>
-        /// Gets список настроек приложения.
+        /// Gets or sets список курсов.
         /// </summary>
-        public List<Tool> Tools => new List<Tool>()
-        {
-            new Tool() { Name = LocalizedText.ToolsLanguageTitle, TypePage = new LanguageTools(this) },
-        };
+        public IList<CoursesListModel> Courses { get; private set; }
 
         /// <summary>
-        /// Gets or sets дейсвтия при выборе настройки.
+        /// Gets or sets дейсвтия при выборе курса.
         /// </summary>
-        public Tool SelectedToolCommand
+        public CoursesListModel SelectedToolCommand
         {
             get => null;
             set
@@ -49,22 +47,23 @@ namespace StudyNowMobileApp.ViewModels.Tools
         }
 
         /// <inheritdoc/>
-        public override string TitlePage => LocalizedText.ToolsPageTitle;
+        public override string TitlePage => LocalizedText.CoursesListPageTitle;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ToolsViewModel"/> class.
+        /// Initializes a new instance of the <see cref="CoursesListViewModel"/> class.
         /// </summary>
 #pragma warning disable SA1201 // Elements should appear in the correct order
-        public ToolsViewModel()
+        public CoursesListViewModel(IList<CoursesListModel> coursesLists)
 #pragma warning restore SA1201 // Elements should appear in the correct order
         {
+            this.Courses = coursesLists;
         }
 
         /// <inheritdoc/>
         protected override List<string> PropertyNames => new List<string>()
         {
             nameof(this.TitlePage),
-            nameof(this.Tools),
+            nameof(this.Courses),
         };
     }
 }

@@ -1,28 +1,31 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <baseview:BaseContentPage  xmlns:baseview="clr-namespace:StudyNowMobileApp.Views.BaseView"
-                           xmlns="http://xamarin.com/schemas/2014/forms" 
+                           xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="StudyNowMobileApp.Views.ToolsMenu.ToolsPage"
-             Title="{Binding TitlePage}">
+             x:Class="StudyNowMobileApp.Views.Course.CoursesListPage"
+                           Title="{Binding TitlePage}">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/General/List/ListDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../../Resource/CoursesListPage/CoursesListDictianary.xaml"></ResourceDictionary>
     </baseview:BaseContentPage.Resources>
 
     <baseview:BaseContentPage.Content>
-        <ListView ItemsSource="{Binding Tools}"
+        <ListView ItemsSource="{Binding Courses}"
                   SelectedItem="{Binding SelectedToolCommand}"
                   RowHeight="60">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Frame>
-                            <Label x:Name="LanguageToolsBtn"
-                                   Text="{Binding Name}"
-                                   FontSize="15"/>
+                            <StackLayout Style="{StaticResource LangItem}">
+                                <Image Source="{Binding ImageSource}"></Image>
+                                <Label
+                            Text="{Binding DisplayName}"></Label>
+                            </StackLayout>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>

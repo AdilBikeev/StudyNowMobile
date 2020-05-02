@@ -11,28 +11,34 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace StudyNowMobileApp.Views.ToolsMenu
+namespace StudyNowMobileApp.Views.Course
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using StudyNowMobileApp.Models.CoursesList;
     using StudyNowMobileApp.ViewModels;
-    using StudyNowMobileApp.ViewModels.Tools;
+    using StudyNowMobileApp.ViewModels.Course;
     using StudyNowMobileApp.Views.BaseView;
+    using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     /// <summary>
-    /// Страница "Настройки".
+    /// Список курсов.
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ToolsPage : BaseContentPage
+    public partial class CoursesListPage : BaseContentPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ToolsPage"/> class.
+        /// Initializes a new instance of the <see cref="CoursesListPage"/> class.
         /// </summary>
-        /// <param name="viewModel">ViewModel предыдущей страницы.</param>
-        public ToolsPage(BaseViewModel viewModel)
+        /// <param name="coursesLists">Список курсов для отображения на странице.</param>
+        public CoursesListPage(IList<CoursesListModel> coursesLists)
         {
-            this.Vm = viewModel;
             this.InitializeComponent();
-            this.BindingContext = new ToolsViewModel() { Navigation = this.Navigation };
+            this.BindingContext = new CoursesListViewModel(coursesLists) { Navigation = this.Navigation };
         }
     }
 }

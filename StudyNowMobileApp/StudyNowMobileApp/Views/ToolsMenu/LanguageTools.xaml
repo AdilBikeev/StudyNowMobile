@@ -12,7 +12,7 @@
              Title="{Binding TitlePage}">
 
     <baseview:BaseContentPage.Resources>
-        <ResourceDictionary Source="./../../Resource/Tools/ToolsDictianary.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="./../../Resource/General/List/ListDictianary.xaml"></ResourceDictionary>
         <ResourceDictionary Source="./../../Resource/Tools/LanguageToolsDictianary.xaml"></ResourceDictionary>
     </baseview:BaseContentPage.Resources>
 

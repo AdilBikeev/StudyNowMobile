@@ -163,4 +163,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Tools_Lang_Russian.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\CoursesList_Math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home_DeployList.png" />
+  </ItemGroup>
 </Project>

@@ -11,28 +11,31 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace StudyNowMobileApp.Views.ToolsMenu
+namespace StudyNowMobileApp.Models.CoursesList
 {
-    using StudyNowMobileApp.ViewModels;
-    using StudyNowMobileApp.ViewModels.Tools;
-    using StudyNowMobileApp.Views.BaseView;
-    using Xamarin.Forms.Xaml;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using Xamarin.Forms;
 
     /// <summary>
-    /// Страница "Настройки".
+    /// Кнопка курса на странице CourseListPage.xaml.
     /// </summary>
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ToolsPage : BaseContentPage
+    public class CoursesListModel
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ToolsPage"/> class.
+        /// Gets or sets имя картинки.
         /// </summary>
-        /// <param name="viewModel">ViewModel предыдущей страницы.</param>
-        public ToolsPage(BaseViewModel viewModel)
-        {
-            this.Vm = viewModel;
-            this.InitializeComponent();
-            this.BindingContext = new ToolsViewModel() { Navigation = this.Navigation };
-        }
+        public string ImageSource { get; set; }
+
+        /// <summary>
+        /// Gets or sets имя курса.
+        /// </summary>
+        public string DisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or sets страница с настройкой.
+        /// </summary>
+        public ContentPage TypePage { get; set; }
     }
 }
