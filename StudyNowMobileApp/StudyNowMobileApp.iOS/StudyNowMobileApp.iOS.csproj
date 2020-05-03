@@ -184,4 +184,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\SelectedCourse_CheckOn.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCourse_Lvl_Teapot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCourse_Lvl_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCourse_Lvl_Genius.png" />
+  </ItemGroup>
 </Project>

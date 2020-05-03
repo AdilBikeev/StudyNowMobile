@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Dynamic;
+    using System.Linq;
     using System.Text;
     using StudyNowMobileApp.Models.Course;
 
@@ -43,6 +44,21 @@
 
         /// <inheritdoc/>
         public override string TitlePage { get => this.SelectedCours.DisplayName; }
+
+        /// <summary>
+        /// Gets кол-во заданий курса.
+        /// </summary>
+        public int TaskCount => this.SelectedCours.TaskPages.Count;
+
+        /// <summary>
+        /// Gets кол-во пройденных заданий курса.
+        /// </summary>
+        public int TaskComplete => this.SelectedCours.TaskPages.Count(x => x.IsDone == true);
+
+        /// <summary>
+        /// Gets процентное соотношение решенных заданий курса.
+        /// </summary>
+        public float ProgressCours => this.TaskComplete / this.TaskCount;
 
         /// <inheritdoc/>
         protected override List<string> PropertyNames => new List<string>()

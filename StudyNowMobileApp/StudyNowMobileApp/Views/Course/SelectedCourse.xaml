@@ -16,52 +16,76 @@
     </baseview:BaseContentPage.Resources>
 
     <baseview:BaseContentPage.Content>
-        <StackLayout>
-            <AbsoluteLayout>
-                <!--#region Фоновая картинка курса-->
-                <FlexLayout Style="{StaticResource ImageBgFlex}">
-                    <Image Style="{StaticResource ImageBg}"
+        <ScrollView>
+            <StackLayout Margin="0">
+                <AbsoluteLayout>
+                    <!--#region Фоновая картинка курса-->
+                    <FlexLayout Style="{StaticResource ImageBgFlex}">
+                        <Image Style="{StaticResource ImageBg}"
                         Source="{Binding BacgroundCoursImage}"></Image>
-                </FlexLayout>
-                <!--#endregion-->
+                    </FlexLayout>
+                    <!--#endregion-->
 
-                <!--#region Название курса-->
-                <FlexLayout
+                    <!--#region Название курса-->
+                    <FlexLayout
                     Style="{StaticResource TitleFlex}">
-                    <Label  Style="{StaticResource TitleTopBar}"
+                        <Label  Style="{StaticResource TitleTopBar}"
                         Text="{Binding TitlePage}"/>
-                </FlexLayout>
-                <!--#endregion-->
-                
-                <!--#region ToolBar-->
-                <FlexLayout     Style="{StaticResource FlexTopBar}">
-                    <ImageButton Style="{StaticResource BackTopBar}"
+                    </FlexLayout>
+                    <!--#endregion-->
+
+                    <!--#region ToolBar-->
+                    <FlexLayout     Style="{StaticResource FlexTopBar}">
+                        <ImageButton Style="{StaticResource BackTopBar}"
                             Command="{Binding NavigateBack}"/>
 
-                    <ImageButton Style="{StaticResource HomeTopBar}"
+                        <ImageButton Style="{StaticResource HomeTopBar}"
                                  Command="{Binding NavigateHome}"/>
-                </FlexLayout>
+                    </FlexLayout>
+                    <!--#endregion-->
+                </AbsoluteLayout>
+                <!--#region ProgressBar-->
+                <Frame Style="{StaticResource ProgressBarFrame}">
+                    <StackLayout Style="{StaticResource ProgressBarStack}">
+                        <AbsoluteLayout Style="{StaticResource ProgressBarAbsolute}">
+                            <Image Source="SelectedCourse_Lvl_Bg.png"/>
+                            <Image Style="{StaticResource  ProgressBarLvl}"/>
+                        </AbsoluteLayout>
+                        <ProgressBar Progress="{Binding ProgressCours}"/>
+                        <Label Style="{StaticResource ProgressBarLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding TaskComplete}"/>
+                                    <Span Text="/"/>
+                                    <Span Text="{Binding TaskCount}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Frame>
                 <!--#endregion-->
-            </AbsoluteLayout>
 
-            <ListView Style="{StaticResource CourseTasksList}"
+                <!--#region Список заданий-->
+                <ListView Style="{StaticResource CourseTasksList}"
                       ItemsSource="{Binding CourseTasks}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame Style="{StaticResource TaskFrame}">
-                                <StackLayout Style="{StaticResource TaskStack}">
-                                    <Image Source="{Binding Source={x:Reference SelectedCoursePage}, Path=BindingContext.TaskIcon}"></Image>
-                                    <Label  Style="{StaticResource TaskLabel}"
-                                            Text="{Binding DisplayName}"></Label>
-                                    <Image Source="{Binding CheckIcon}"></Image>
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </StackLayout>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Style="{StaticResource TaskFrame}">
+                                    <FlexLayout Style="{StaticResource TaskFlex}">
+                                        <Image Source="{Binding Source={x:Reference SelectedCoursePage}, Path=BindingContext.TaskIcon}"/>
+                                        <Label  Style="{StaticResource TaskLabel}"
+                                            Text="{Binding DisplayName}"/>
+                                        <Image Style="{StaticResource TaskCompleteImage}"
+                                               Source="{Binding CheckIcon}"/>
+                                    </FlexLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--#endregion-->
+            </StackLayout>
+        </ScrollView>
     </baseview:BaseContentPage.Content>
 </baseview:BaseContentPage>
