@@ -58,7 +58,26 @@
         /// <summary>
         /// Gets процентное соотношение решенных заданий курса.
         /// </summary>
-        public float ProgressCours => this.TaskComplete / this.TaskCount;
+        public float ProgressCours => (float)this.TaskComplete / (float)this.TaskCount;
+
+        /// <summary>
+        /// Gets имя картинки отражающий статус прохождения курса.
+        /// </summary>
+        public string StatusProgressIcon
+        {
+            get
+            {
+                var progress = this.ProgressCours;
+                if (progress >= 0.9)
+                {
+                    return "SelectedCourse_Lvl_Genius.png";
+                }
+                else
+                {
+                    return "SelectedCourse_Lvl_Teapot.png";
+                }
+            }
+        }
 
         /// <inheritdoc/>
         protected override List<string> PropertyNames => new List<string>()

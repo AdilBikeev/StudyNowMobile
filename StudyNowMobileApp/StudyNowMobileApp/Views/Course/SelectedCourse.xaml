@@ -44,12 +44,14 @@
                     </FlexLayout>
                     <!--#endregion-->
                 </AbsoluteLayout>
+                
                 <!--#region ProgressBar-->
                 <Frame Style="{StaticResource ProgressBarFrame}">
                     <StackLayout Style="{StaticResource ProgressBarStack}">
                         <AbsoluteLayout Style="{StaticResource ProgressBarAbsolute}">
                             <Image Source="SelectedCourse_Lvl_Bg.png"/>
-                            <Image Style="{StaticResource  ProgressBarLvl}"/>
+                            <Image Style="{StaticResource  ProgressBarLvl}"
+                                   Source="{Binding StatusProgressIcon}"/>
                         </AbsoluteLayout>
                         <ProgressBar Progress="{Binding ProgressCours}"/>
                         <Label Style="{StaticResource ProgressBarLabel}">

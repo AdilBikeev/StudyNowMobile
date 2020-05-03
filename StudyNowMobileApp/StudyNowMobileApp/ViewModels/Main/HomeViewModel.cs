@@ -72,6 +72,31 @@ namespace StudyNowMobileApp.ViewModels.Main
                                     CheckOnIcon = "SelectedCourse_CheckOn.png"
                                 }
                             }
+                        },
+                        new CourseModel()
+                        {
+                            DisplayName = "Человек",
+                            IconImage = "CoursesList_Math.png",
+                            BacgroundCoursImage = "SelectedCourse_BgImg.png",
+                            TaskPages = new List<CourseTask>()
+                            {
+                                new CourseTask()
+                                {
+                                    DisplayName = "1 задание",
+                                    FullName = "1 задание",
+                                    IsDone = true,
+                                    CheckOffIcon = null,
+                                    CheckOnIcon = "SelectedCourse_CheckOn.png"
+                                },
+                                new CourseTask()
+                                {
+                                    DisplayName = "2 задание",
+                                    FullName = "2 задание",
+                                    IsDone = true,
+                                    CheckOffIcon =null,
+                                    CheckOnIcon = "SelectedCourse_CheckOn.png"
+                                }
+                            }
                         }
                     }
                 }
