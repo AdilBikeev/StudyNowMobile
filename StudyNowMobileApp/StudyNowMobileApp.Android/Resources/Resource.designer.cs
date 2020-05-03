@@ -5810,22 +5810,46 @@ namespace StudyNowMobileApp.Droid
 			public const int notify_panel_notification_icon_bg = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int Tools_Lang_English = 2131165307;
+			public const int SelectedCourse_BackBtn = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int Tools_Lang_Russian = 2131165308;
+			public const int SelectedCourse_BgImg = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int tooltip_frame_dark = 2131165309;
+			public const int SelectedCourse_CheckOff = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int tooltip_frame_light = 2131165310;
+			public const int SelectedCourse_CheckOn = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int TopBar_Profile = 2131165311;
+			public const int SelectedCourse_HomeBtn = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int TopBar_Tools = 2131165312;
+			public const int SelectedCourse_Lvl_Bg = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int SelectedCourse_Lvl_Genius = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int SelectedCourse_Lvl_Teapot = 2131165314;
+			
+			// aapt resource value: 0x7F070083
+			public const int Tools_Lang_English = 2131165315;
+			
+			// aapt resource value: 0x7F070084
+			public const int Tools_Lang_Russian = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int tooltip_frame_dark = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int tooltip_frame_light = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int TopBar_Profile = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int TopBar_Tools = 2131165320;
 			
 			static Drawable()
 			{

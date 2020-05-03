@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+
+    <!--#region ToolBar-->
+    <Style x:Key="FlexTopBar" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+
+    <Style x:Key="BackTopBar" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="WidthRequest" Value="30" />
+        <Setter Property="Margin" Value="15,15,0,0" />
+        <Setter Property="Source" Value="SelectedCourse_BackBtn.png" />
+    </Style>
+
+    <Style x:Key="TitleFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="TitleTopBar" TargetType="Label">
+        <Setter Property="TextColor" Value="#FFF" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FlexLayout.Basis" Value="100%" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="HomeTopBar" TargetType="ImageButton">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="40" />
+        <Setter Property="Margin" Value="0,10,15,0" />
+        <Setter Property="Source" Value="SelectedCourse_HomeBtn.png" />
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Фоновая картинка курса-->
+    <Style x:Key="ImageBgFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+        <Setter Property="HeightRequest" Value="200" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Key="ImageBg" TargetType="Image">
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="FlexLayout.Basis" Value="100%" />
+    </Style>
+    <!--#endregion-->
+
+    <!--#region ProgressBar-->
+    <Style x:Key="ProgressBarFrame" TargetType="Frame">
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="0, -10, 0, 0" />
+    </Style>
+
+    <Style x:Key="ProgressBarStack" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+    </Style>
+
+    <Style x:Key="ProgressBarAbsolute" TargetType="AbsoluteLayout">
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+        <Setter Property="WidthRequest" Value="65" />
+    </Style>
+
+    <Style x:Key="ProgressBarLvl" TargetType="Image">
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="Margin" Value="12, 15, 0, 0" />
+    </Style>
+
+    <Style TargetType="ProgressBar">
+        <Setter Property="ProgressColor" Value="#4BD37B" />
+        <Setter Property="WidthRequest" Value="160" />
+        <Setter Property="Margin" Value="20, 0, 20, 0" />
+    </Style>
+
+    <Style x:Key="ProgressBarLabel" TargetType="Label">
+        <Setter Property="WidthRequest" Value="80" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Margin" Value="0, 0, 10, 0" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Задания курса-->
+    <Style x:Key="CourseTasksList" TargetType="ListView">
+        <Setter Property="Margin" Value="5, 5, 5, 10" />
+        <Setter Property="RowHeight" Value="60" />
+        <Setter Property="SeparatorVisibility" Value="None" />
+    </Style>
+
+    <Style x:Key="TaskFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="5, 5, 5, 5" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+    <Style x:Key="TaskFlex" TargetType="FlexLayout">
+        <Setter Property="Direction" Value="Row"></Setter>
+        <Setter Property="JustifyContent" Value="SpaceBetween" />
+    </Style>
+
+    <Style x:Key="TaskCompleteImage" TargetType="Image">
+        <Setter Property="FlexLayout.Basis" Value="10%" />
+    </Style>
+
+    <Style x:Key="TaskLabel" TargetType="Label">
+        <Setter Property="WidthRequest" Value="200" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+    <!--#endregion-->
+</ResourceDictionary>   

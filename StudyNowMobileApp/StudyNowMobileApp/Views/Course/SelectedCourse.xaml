@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<baseview:BaseContentPage  xmlns:baseview="clr-namespace:StudyNowMobileApp.Views.BaseView"
+                           xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                           mc:Ignorable="d"
+             x:Class="StudyNowMobileApp.Views.Course.SelectedCours"
+                           Title="{Binding TitlePage}"
+                           NavigationPage.HasNavigationBar="False"
+                           x:Name="SelectedCoursePage"
+                          BackgroundColor="#F5EBEB">
+
+    <baseview:BaseContentPage.Resources>
+        <ResourceDictionary Source="./../../Resource/SelectedCours/SelectedCoursDictianary.xaml"/>
+    </baseview:BaseContentPage.Resources>
+
+    <baseview:BaseContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="0">
+                <AbsoluteLayout>
+                    <!--#region Фоновая картинка курса-->
+                    <FlexLayout Style="{StaticResource ImageBgFlex}">
+                        <Image Style="{StaticResource ImageBg}"
+                        Source="{Binding BacgroundCoursImage}"></Image>
+                    </FlexLayout>
+                    <!--#endregion-->
+
+                    <!--#region Название курса-->
+                    <FlexLayout
+                    Style="{StaticResource TitleFlex}">
+                        <Label  Style="{StaticResource TitleTopBar}"
+                        Text="{Binding TitlePage}"/>
+                    </FlexLayout>
+                    <!--#endregion-->
+
+                    <!--#region ToolBar-->
+                    <FlexLayout     Style="{StaticResource FlexTopBar}">
+                        <ImageButton Style="{StaticResource BackTopBar}"
+                            Command="{Binding NavigateBack}"/>
+
+                        <ImageButton Style="{StaticResource HomeTopBar}"
+                                 Command="{Binding NavigateHome}"/>
+                    </FlexLayout>
+                    <!--#endregion-->
+                </AbsoluteLayout>
+                
+                <!--#region ProgressBar-->
+                <Frame Style="{StaticResource ProgressBarFrame}">
+                    <StackLayout Style="{StaticResource ProgressBarStack}">
+                        <AbsoluteLayout Style="{StaticResource ProgressBarAbsolute}">
+                            <Image Source="SelectedCourse_Lvl_Bg.png"/>
+                            <Image Style="{StaticResource  ProgressBarLvl}"
+                                   Source="{Binding StatusProgressIcon}"/>
+                        </AbsoluteLayout>
+                        <ProgressBar Progress="{Binding ProgressCours}"/>
+                        <Label Style="{StaticResource ProgressBarLabel}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding TaskComplete}"/>
+                                    <Span Text="/"/>
+                                    <Span Text="{Binding TaskCount}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Список заданий-->
+                <ListView Style="{StaticResource CourseTasksList}"
+                      ItemsSource="{Binding CourseTasks}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Style="{StaticResource TaskFrame}">
+                                    <FlexLayout Style="{StaticResource TaskFlex}">
+                                        <Image Source="{Binding Source={x:Reference SelectedCoursePage}, Path=BindingContext.TaskIcon}"/>
+                                        <Label  Style="{StaticResource TaskLabel}"
+                                            Text="{Binding DisplayName}"/>
+                                        <Image Style="{StaticResource TaskCompleteImage}"
+                                               Source="{Binding CheckIcon}"/>
+                                    </FlexLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--#endregion-->
+            </StackLayout>
+        </ScrollView>
+    </baseview:BaseContentPage.Content>
+</baseview:BaseContentPage>

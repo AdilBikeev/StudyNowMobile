@@ -15,10 +15,14 @@ namespace StudyNowMobileApp.ViewModels.Course
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
+    using System.Windows.Input;
     using StudyNowMobileApp.Localization;
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
     using StudyNowMobileApp.Models.Tools;
+    using StudyNowMobileApp.Views.Course;
     using StudyNowMobileApp.Views.ToolsMenu;
+    using Xamarin.Forms;
 
     /// <summary>
     /// Служит прослойкой для CoursesListPage.xaml.
@@ -28,22 +32,22 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// <summary>
         /// Gets or sets список курсов.
         /// </summary>
-        public IList<CoursesListModel> Courses { get; private set; }
+        public IList<CourseModel> Courses { get; private set; }
 
         /// <summary>
-        /// Gets or sets дейсвтия при выборе курса.
+        /// Gets or sets действия при выборе курса.
         /// </summary>
-        public CoursesListModel SelectedToolCommand
+        public ICommand SelectedCourseCommand { get; private set; }
+
+        /// <summary>
+        /// Переходит на страницу курса.
+        /// </summary>
+        /// <param name="coursName">Название выбранного курса.</param>
+        private void SelectedCourse(string coursName)
         {
-            get => null;
-            set
-            {
-                if (value != null)
-                {
-                    this.Navigation.PushAsync(value.TypePage);
-                    this.UpdatePropertyChanged();
-                }
-            }
+            var cours = this.Courses.First(x => x.DisplayName == coursName);
+            this.Navigation.PushAsync(new SelectedCours(cours));
+            this.UpdatePropertyChanged();
         }
 
         /// <inheritdoc/>
@@ -52,11 +56,10 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// <summary>
         /// Initializes a new instance of the <see cref="CoursesListViewModel"/> class.
         /// </summary>
-#pragma warning disable SA1201 // Elements should appear in the correct order
-        public CoursesListViewModel(IList<CoursesListModel> coursesLists)
-#pragma warning restore SA1201 // Elements should appear in the correct order
+        public CoursesListViewModel(IList<CourseModel> coursesLists)
         {
             this.Courses = coursesLists;
+            this.SelectedCourseCommand = new Command<string>(this.SelectedCourse);
         }
 
         /// <inheritdoc/>

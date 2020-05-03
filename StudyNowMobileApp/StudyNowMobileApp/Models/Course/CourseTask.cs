@@ -11,34 +11,45 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace StudyNowMobileApp.Views.Course
+namespace StudyNowMobileApp.Models.Course
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
-    using StudyNowMobileApp.Models.Course;
-    using StudyNowMobileApp.ViewModels;
-    using StudyNowMobileApp.ViewModels.Course;
-    using StudyNowMobileApp.Views.BaseView;
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
     /// <summary>
-    /// Список курсов.
+    /// Задание курса.
     /// </summary>
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CoursesListPage : BaseContentPage
+    public class CourseTask
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoursesListPage"/> class.
+        /// Gets or sets Название задания для оторажения на странице курса.
         /// </summary>
-        /// <param name="coursesLists">Список курсов для отображения на странице.</param>
-        public CoursesListPage(IList<CourseModel> coursesLists)
-        {
-            this.InitializeComponent();
-            this.BindingContext = new CoursesListViewModel(coursesLists) { Navigation = this.Navigation };
-        }
+        public string DisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or sets полное название заадния.
+        /// </summary>
+        public string FullName { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether, задание выполненым.
+        /// </summary>
+        public bool IsDone { get; set; }
+
+        /// <summary>
+        /// Gets картинку показывающая, что задание выполнено/нет в зависимости от статуса IsDone.
+        /// </summary>
+        public string CheckIcon => this.IsDone ? this.CheckOnIcon : this.CheckOffIcon;
+
+        /// <summary>
+        /// Gets or sets иконка, показывающая, что задание выполнено.
+        /// </summary>
+        public string CheckOnIcon { get; set; }
+
+        /// <summary>
+        /// Gets or sets иконка, показывающая, что задание не выполнено.
+        /// </summary>
+        public string CheckOffIcon { get; set; }
     }
 }

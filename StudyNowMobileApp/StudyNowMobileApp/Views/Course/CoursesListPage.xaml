@@ -6,7 +6,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Course.CoursesListPage"
-                           Title="{Binding TitlePage}">
+                           Title="{Binding TitlePage}"
+                           x:Name="CourseListPageName">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/General/List/ListDictianary.xaml"></ResourceDictionary>
@@ -15,15 +16,20 @@
 
     <baseview:BaseContentPage.Content>
         <ListView ItemsSource="{Binding Courses}"
-                  SelectedItem="{Binding SelectedToolCommand}"
+                  SelectedItem="{Binding SelectedCourseCommand}"
                   RowHeight="60">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Frame>
-                            <StackLayout Style="{StaticResource LangItem}">
-                                <Image Source="{Binding ImageSource}"></Image>
-                                <Label
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding Source={x:Reference CourseListPageName}, Path=BindingContext.SelectedCourseCommand}" 
+                                    CommandParameter="{Binding Source={x:Reference CoursNameLb}, Path=Text}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Style="{StaticResource CoursItem}">
+                                <Image Source="{Binding IconImage}"></Image>
+                                <Label x:Name="CoursNameLb"
                             Text="{Binding DisplayName}"></Label>
                             </StackLayout>
                         </Frame>

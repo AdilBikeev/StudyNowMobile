@@ -11,7 +11,7 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace StudyNowMobileApp.Models.CoursesList
+namespace StudyNowMobileApp.Models.Course
 {
     using System;
     using System.Collections.Generic;
@@ -21,12 +21,17 @@ namespace StudyNowMobileApp.Models.CoursesList
     /// <summary>
     /// Кнопка курса на странице CourseListPage.xaml.
     /// </summary>
-    public class CoursesListModel
+    public class CourseModel
     {
         /// <summary>
-        /// Gets or sets имя картинки.
+        /// Gets or sets имя картинки устанавливаемая в качестве иконки.
         /// </summary>
-        public string ImageSource { get; set; }
+        public string IconImage { get; set; }
+
+        /// <summary>
+        /// Фоновая картинка устанавливаемая на странице курса.
+        /// </summary>
+        public string BacgroundCoursImage { get; set; }
 
         /// <summary>
         /// Gets or sets имя курса.
@@ -34,8 +39,8 @@ namespace StudyNowMobileApp.Models.CoursesList
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or sets страница с настройкой.
+        /// Gets or sets задания курса.
         /// </summary>
-        public ContentPage TypePage { get; set; }
+        public IList<CourseTask> TaskPages { get; set; }
     }
 }
