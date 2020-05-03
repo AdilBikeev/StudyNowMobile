@@ -16,7 +16,7 @@
         /// Инициализирует страницу подставляя все данные о курсе согласно пришедшему объекту.
         /// </summary>
         /// <param name="course">Объект выбранного курса.</param>
-        public SelectedCourseViewModel(CoursesListModel course)
+        public SelectedCourseViewModel(CourseModel course)
         {
             this.SelectedCours = course;
         }
@@ -24,7 +24,7 @@
         /// <summary>
         /// Gets выбранный курс.
         /// </summary>
-        public CoursesListModel SelectedCours { get; private set; }
+        public CourseModel SelectedCours { get; private set; }
 
         /// <summary>
         /// Gets фоновая картинка курса.

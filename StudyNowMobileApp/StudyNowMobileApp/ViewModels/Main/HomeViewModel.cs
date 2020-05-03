@@ -46,9 +46,9 @@ namespace StudyNowMobileApp.ViewModels.Main
                 new Curs()
                 {
                     Name = "ОГЭ", Description = "Подготовка к ОГЭ",
-                    SubCurs = new List<CoursesListModel>
+                    SubCurs = new List<CourseModel>
                     {
-                        new CoursesListModel()
+                        new CourseModel()
                         {
                             DisplayName = "Математика",
                             IconImage = "CoursesList_Math.png",
@@ -60,11 +60,6 @@ namespace StudyNowMobileApp.ViewModels.Main
             };
             this.IsLoading = false;
         }
-
-        /// <summary>
-        /// Команда для вывода списка под-курсов.
-        /// </summary>
-        public ICommand ShowCoursListCommand { get; }
 
         /// <summary>
         /// Переходит на страницу для отображения всех под-курсов.
@@ -151,12 +146,35 @@ namespace StudyNowMobileApp.ViewModels.Main
         /// </summary>
         public ICommand NavigateToolsCommand { get; protected set; }
 
+        /// <summary>
+        /// Команда для вывода списка под-курсов.
+        /// </summary>
+        public ICommand ShowCoursListCommand { get; }
+
+        /// <summary>
+        /// Действие при выборе курса.
+        /// </summary>
+        public ICommand SelectedCourseCommand { get; private set; }
+
         /// <inheritdoc/>
         protected override List<string> PropertyNames => new List<string>()
         {
             nameof(this.PlaceHolderText),
             nameof(this.TitlePage),
         };
+
+        /// <summary>
+        /// Переходит на страницу курса.
+        /// </summary>
+        public CourseModel SelectedCourse
+        {
+            get => null;
+            set 
+            {
+                this.Navigation.PushAsync(new SelectedCours(value));
+                this.NotifyPropertyChanged();
+            }
+        }
 
         private void NavigateTools()
         {

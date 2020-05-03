@@ -21,7 +21,7 @@ namespace StudyNowMobileApp.Models.CoursesList
     /// <summary>
     /// Кнопка курса на странице CourseListPage.xaml.
     /// </summary>
-    public class CoursesListModel
+    public class CourseModel
     {
         /// <summary>
         /// Gets or sets имя картинки устанавливаемая в качестве иконки.

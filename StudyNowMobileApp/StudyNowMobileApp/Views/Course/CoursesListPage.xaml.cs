@@ -35,7 +35,7 @@ namespace StudyNowMobileApp.Views.Course
         /// Initializes a new instance of the <see cref="CoursesListPage"/> class.
         /// </summary>
         /// <param name="coursesLists">Список курсов для отображения на странице.</param>
-        public CoursesListPage(IList<CoursesListModel> coursesLists)
+        public CoursesListPage(IList<CourseModel> coursesLists)
         {
             this.InitializeComponent();
             this.BindingContext = new CoursesListViewModel(coursesLists) { Navigation = this.Navigation };

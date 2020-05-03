@@ -22,7 +22,7 @@
         /// Initializes a new instance of the <see cref="SelectedCours"/> class.
         /// </summary>
         /// <param name="selectedCourse">Выбранный курсю</param>
-        public SelectedCours(CoursesListModel selectedCourse)
+        public SelectedCours(CourseModel selectedCourse)
         {
             this.InitializeComponent();
             this.BindingContext = new SelectedCourseViewModel(selectedCourse) { Navigation = this.Navigation };

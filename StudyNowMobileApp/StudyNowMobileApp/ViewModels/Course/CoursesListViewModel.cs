@@ -32,7 +32,7 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// <summary>
         /// Gets or sets список курсов.
         /// </summary>
-        public IList<CoursesListModel> Courses { get; private set; }
+        public IList<CourseModel> Courses { get; private set; }
 
         /// <summary>
         /// Gets or sets действия при выборе курса.
@@ -56,7 +56,7 @@ namespace StudyNowMobileApp.ViewModels.Course
         /// <summary>
         /// Initializes a new instance of the <see cref="CoursesListViewModel"/> class.
         /// </summary>
-        public CoursesListViewModel(IList<CoursesListModel> coursesLists)
+        public CoursesListViewModel(IList<CourseModel> coursesLists)
         {
             this.Courses = coursesLists;
             this.SelectedCourseCommand = new Command<string>(this.SelectedCourse);

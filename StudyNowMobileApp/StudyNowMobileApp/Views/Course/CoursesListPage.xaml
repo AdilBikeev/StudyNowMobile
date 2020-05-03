@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Course.CoursesListPage"
                            Title="{Binding TitlePage}"
-                           x:Name="CourseListPagename">
+                           x:Name="CourseListPageName">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/General/List/ListDictianary.xaml"></ResourceDictionary>
@@ -24,7 +24,7 @@
                         <Frame>
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer 
-                                    Command="{Binding Source={x:Reference CourseListPagename}, Path=BindingContext.SelectedCourseCommand}" 
+                                    Command="{Binding Source={x:Reference CourseListPageName}, Path=BindingContext.SelectedCourseCommand}" 
                                     CommandParameter="{Binding Source={x:Reference CoursNameLb}, Path=Text}"/>
                             </Frame.GestureRecognizers>
                             <StackLayout Style="{StaticResource CoursItem}">

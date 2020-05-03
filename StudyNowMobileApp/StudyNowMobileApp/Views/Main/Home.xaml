@@ -68,7 +68,9 @@
                                            Text="{Binding Description}"></Label>
                                     <!--#region Список курсов по заданной тематике-->
                                     <CollectionView  ItemsSource="{Binding SubCurs}"
-                                                     Style="{StaticResource  SubCursCollView}">
+                                                     Style="{StaticResource  SubCursCollView}"
+                                                     SelectionMode="Single"
+                                                     SelectedItem="{Binding Source={x:Reference HomePage}, Path=BindingContext.SelectedCourse}">
                                         <CollectionView.ItemsLayout>
                                             <LinearItemsLayout>
                                                 <x:Arguments>
