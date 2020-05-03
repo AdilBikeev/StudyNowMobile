@@ -18,7 +18,7 @@ namespace StudyNowMobileApp.Views.Course
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
     using StudyNowMobileApp.ViewModels;
     using StudyNowMobileApp.ViewModels.Course;
     using StudyNowMobileApp.Views.BaseView;

@@ -135,13 +135,19 @@
     <AndroidResource Include="Resources\drawable\Home_DeployList.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\SelectedCours_HomeBtn.png" />
+    <AndroidResource Include="Resources\drawable\SelectedCourse_CheckOff.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\SelectedCours_BackBtn.png" />
+    <AndroidResource Include="Resources\drawable\SelectedCourse_HomeBtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\SelectedCours_BgImg.png" />
+    <AndroidResource Include="Resources\drawable\SelectedCourse_BackBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SelectedCourse_BgImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SelectedCourse_CheckOn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

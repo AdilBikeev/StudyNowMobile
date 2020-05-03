@@ -170,12 +170,18 @@
     <BundleResource Include="Resources\Home_DeployList.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\SelectedCours_HomeBtn.png" />
+    <BundleResource Include="Resources\SelectedCourse_HomeBtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\SelectedCours_BackBtn.png" />
+    <BundleResource Include="Resources\SelectedCourse_BackBtn.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\SelectedCours_BgImg.png" />
+    <BundleResource Include="Resources\SelectedCourse_BgImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SelectedCourse_CheckOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\SelectedCourse_CheckOn.png" />
   </ItemGroup>
 </Project>

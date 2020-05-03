@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Dynamic;
     using System.Text;
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
 
     /// <summary>
     /// Служит прослойкой для SelectedCourse.xaml.
@@ -27,9 +27,19 @@
         public CourseModel SelectedCours { get; private set; }
 
         /// <summary>
+        /// Gets список заданий курса.
+        /// </summary>
+        public IList<CourseTask> CourseTasks => this.SelectedCours.TaskPages;
+
+        /// <summary>
         /// Gets фоновая картинка курса.
         /// </summary>
         public string BacgroundCoursImage { get => this.SelectedCours.BacgroundCoursImage; }
+
+        /// <summary>
+        /// Gets иконку, отоюражаемая на каждом задании курса.
+        /// </summary>
+        public string TaskIcon => this.SelectedCours.IconImage;
 
         /// <inheritdoc/>
         public override string TitlePage { get => this.SelectedCours.DisplayName; }

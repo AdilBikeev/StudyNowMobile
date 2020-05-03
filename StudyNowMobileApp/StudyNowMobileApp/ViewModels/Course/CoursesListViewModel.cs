@@ -18,7 +18,7 @@ namespace StudyNowMobileApp.ViewModels.Course
     using System.Linq;
     using System.Windows.Input;
     using StudyNowMobileApp.Localization;
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
     using StudyNowMobileApp.Models.Tools;
     using StudyNowMobileApp.Views.Course;
     using StudyNowMobileApp.Views.ToolsMenu;

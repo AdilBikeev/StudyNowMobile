@@ -7,7 +7,9 @@
                            mc:Ignorable="d"
              x:Class="StudyNowMobileApp.Views.Course.SelectedCours"
                            Title="{Binding TitlePage}"
-                           NavigationPage.HasNavigationBar="False">
+                           NavigationPage.HasNavigationBar="False"
+                           x:Name="SelectedCoursePage"
+                          BackgroundColor="#F5EBEB">
 
     <baseview:BaseContentPage.Resources>
         <ResourceDictionary Source="./../../Resource/SelectedCours/SelectedCoursDictianary.xaml"/>
@@ -23,12 +25,14 @@
                 </FlexLayout>
                 <!--#endregion-->
 
+                <!--#region Название курса-->
                 <FlexLayout
                     Style="{StaticResource TitleFlex}">
                     <Label  Style="{StaticResource TitleTopBar}"
                         Text="{Binding TitlePage}"/>
                 </FlexLayout>
-
+                <!--#endregion-->
+                
                 <!--#region ToolBar-->
                 <FlexLayout     Style="{StaticResource FlexTopBar}">
                     <ImageButton Style="{StaticResource BackTopBar}"
@@ -39,6 +43,25 @@
                 </FlexLayout>
                 <!--#endregion-->
             </AbsoluteLayout>
+
+            <ListView Style="{StaticResource CourseTasksList}"
+                      ItemsSource="{Binding CourseTasks}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Style="{StaticResource TaskFrame}">
+                                <StackLayout Style="{StaticResource TaskStack}">
+                                    <Image Source="{Binding Source={x:Reference SelectedCoursePage}, Path=BindingContext.TaskIcon}"></Image>
+                                    <Label  Style="{StaticResource TaskLabel}"
+                                            Text="{Binding DisplayName}"></Label>
+                                    <Image Source="{Binding CheckIcon}"></Image>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </baseview:BaseContentPage.Content>
 </baseview:BaseContentPage>

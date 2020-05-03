@@ -19,7 +19,7 @@ namespace StudyNowMobileApp.ViewModels.Main
     using System.Linq;
     using System.Windows.Input;
     using StudyNowMobileApp.Localization;
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
     using StudyNowMobileApp.Models.Home;
     using StudyNowMobileApp.Views.Course;
     using StudyNowMobileApp.Views.ToolsMenu;
@@ -52,7 +52,26 @@ namespace StudyNowMobileApp.ViewModels.Main
                         {
                             DisplayName = "Математика",
                             IconImage = "CoursesList_Math.png",
-                            BacgroundCoursImage = "SelectedCours_BgImg.png"
+                            BacgroundCoursImage = "SelectedCourse_BgImg.png",
+                            TaskPages = new List<CourseTask>()
+                            {
+                                new CourseTask()
+                                {
+                                    DisplayName = "1 задание",
+                                    FullName = "1 задание",
+                                    IsDone = true,
+                                    CheckOffIcon = null,
+                                    CheckOnIcon = "SelectedCourse_CheckOn.png"
+                                },
+                                new CourseTask()
+                                {
+                                    DisplayName = "2 задание",
+                                    FullName = "2 задание",
+                                    IsDone = false,
+                                    CheckOffIcon =null,
+                                    CheckOnIcon = "SelectedCourse_CheckOn.png"
+                                }
+                            }
                         }
                     }
                 }

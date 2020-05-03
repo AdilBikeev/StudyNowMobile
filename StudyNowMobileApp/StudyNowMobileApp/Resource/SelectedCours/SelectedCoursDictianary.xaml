@@ -17,7 +17,7 @@
         <Setter Property="HeightRequest" Value="30" />
         <Setter Property="WidthRequest" Value="30" />
         <Setter Property="Margin" Value="15,15,0,0" />
-        <Setter Property="Source" Value="SelectedCours_BackBtn.png" />
+        <Setter Property="Source" Value="SelectedCourse_BackBtn.png" />
     </Style>
 
     <Style x:Key="TitleFlex" TargetType="FlexLayout">
@@ -40,7 +40,7 @@
         <Setter Property="HeightRequest" Value="40" />
         <Setter Property="WidthRequest" Value="40" />
         <Setter Property="Margin" Value="0,10,15,0" />
-        <Setter Property="Source" Value="SelectedCours_HomeBtn.png" />
+        <Setter Property="Source" Value="SelectedCourse_HomeBtn.png" />
     </Style>
     <!--#endregion-->
 
@@ -59,4 +59,33 @@
     <!--#endregion-->
 
 
+    <!--#region Задания курса-->
+    <Style x:Key="CourseTasksList" TargetType="ListView">
+        <Setter Property="Margin" Value="5, 5, 5, 10" />
+        <Setter Property="RowHeight" Value="60" />
+        <Setter Property="SeparatorVisibility" Value="None" />
+    </Style>
+
+    <Style x:Key="TaskFrame" TargetType="Frame">
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="5, 5, 5, 5" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+    <Style x:Key="TaskStack" TargetType="StackLayout">
+        <Setter Property="Orientation" Value="Horizontal" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style x:Name="TaskCompleteImage" TargetType="Image">
+        <Setter Property="Background" Value="Red" />
+    </Style>
+    
+    <Style x:Key="TaskLabel" TargetType="Label">
+        <Setter Property="WidthRequest" Value="250" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+    <!--#endregion-->
 </ResourceDictionary>   

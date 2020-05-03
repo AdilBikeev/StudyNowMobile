@@ -13,7 +13,7 @@
 //------------------------------------------------------------------------------
 namespace StudyNowMobileApp.Models.Home
 {
-    using StudyNowMobileApp.Models.CoursesList;
+    using StudyNowMobileApp.Models.Course;
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
