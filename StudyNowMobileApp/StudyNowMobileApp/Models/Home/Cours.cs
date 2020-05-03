@@ -25,7 +25,7 @@ namespace StudyNowMobileApp.Models.Home
     /// <summary>
     /// Описывает курс на домашней странице.
     /// </summary>
-    public class Curs
+    public class Cours
     {
         /// <summary>
         /// Gets задает имя для кнопки "развернуть" на каждом курсе.

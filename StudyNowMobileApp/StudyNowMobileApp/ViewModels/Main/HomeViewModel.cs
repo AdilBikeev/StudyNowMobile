@@ -30,7 +30,7 @@ namespace StudyNowMobileApp.ViewModels.Main
     /// </summary>
     public class HomeViewModel : BaseViewModel
     {
-        private IList<Curs> searcherCurs;
+        private IList<Cours> searcherCurs;
         private string querySearchBar = string.Empty;
 
         /// <summary>
@@ -40,10 +40,10 @@ namespace StudyNowMobileApp.ViewModels.Main
         {
             this.NavigateToolsCommand = new Command(this.NavigateTools);
             this.ShowCoursListCommand = new Command<string>(this.ShowCoursList);
-            this.searcherCurs = this.Curs = new List<Curs>
+            this.searcherCurs = this.Curs = new List<Cours>
             {
 #pragma warning disable SA1413 // Use trailing comma in multi-line initializers
-                new Curs()
+                new Cours()
                 {
                     Name = "ОГЭ", Description = "Подготовка к ОГЭ",
                     SubCurs = new List<CourseModel>
@@ -102,7 +102,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         /// Gets or sets искомые курсы.
         /// </summary>
 #pragma warning disable CA2227 // Свойства коллекций должны быть доступны только для чтения
-        public IList<Curs> SearcherCurs
+        public IList<Cours> SearcherCurs
 #pragma warning restore CA2227 // Свойства коллекций должны быть доступны только для чтения
         {
             get
@@ -120,7 +120,7 @@ namespace StudyNowMobileApp.ViewModels.Main
         /// <summary>
         /// Gets список курсов.
         /// </summary>
-        public IList<Curs> Curs { get; private set; }
+        public IList<Cours> Curs { get; private set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether нужно ли показывать Иконку с прогрузкой страницы.
